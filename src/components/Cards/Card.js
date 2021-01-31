@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({card}) {
+function Card({ card }) {
   return (
     <div className="card">
       <div className="card_img_Cont">
@@ -20,7 +20,7 @@ function Card({card}) {
         </div>
         <div className="card_info">
           <b>Language: {card.language}</b>
-        </div> 
+        </div>
         <div className="card_info">
           <b>Update: {card.update}</b>
         </div>
