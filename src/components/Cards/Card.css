@@ -1,0 +1,149 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  max-width: var(--maxWidth);
+  margin-top: 60px;
+  z-index: 99;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+}
+
+.projects {
+  margin-top: 100px;
+}
+
+.card {
+  position: relative;
+  width: 560px;
+  height: 490px;
+  margin: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  background-size: contain;
+  transition: .30s;
+  border: 1px solid rgba(139, 139, 139, 0.15);
+  background: var(--bgCards);
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 8px 15px rgb(0 0 0 / 20%);
+  box-shadow: 0 8px 15px rgb(0 0 0 / 20%);
+}
+
+.card_img_Cont {
+  position: relative;
+  width: auto;
+  height: calc(100% - 184px);
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.card_view_content {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  opacity: 1;
+  background: transparent;
+}
+
+.card_title, .card_info {
+  text-align: left;
+  overflow: hidden;
+  color: var(--colorT);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card_title {
+  padding: 3px 9px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card_info {
+  padding: 3px 9px;
+  font-size: 16px;
+  height: 23px;
+  line-height: 23px;
+  font-weight: 500;
+}
+
+.card_view {
+  position: relative;
+  top: 8px;
+  left: 5px;
+  height: 55px;
+  text-align: left;
+}
+
+.btn_Demo, .btn_Code {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  color: white;
+  padding: 8px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.btn_Demo {
+  display: none;
+  background: rgb(0, 81, 255);
+}
+
+.btn_Demo:hover {
+  background: rgb(60, 60, 163);
+}
+
+.btn_Code {
+  background: green;
+}
+
+.btn_Code:hover {
+  background: rgb(12, 108, 12);
+}
+
+.btn_Demo.activeDemo {
+  display: inline-block;
+}
+
+@media screen and (max-width: 475px) {
+  .card {
+    height: 335px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .card {
+    height: 300px;
+  }
+}

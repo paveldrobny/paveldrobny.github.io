@@ -1,0 +1,208 @@
+.slider-content {
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  max-width: 1300px;
+  margin: 80px auto 30px auto;
+  height: 730px;
+  background: transparent;
+}
+
+.slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 10px auto 0 auto;
+  padding-top: 30px;
+  height: calc(100% - 20px);
+  transition: 0.3s;
+}
+
+.slider-btn {
+  z-index: 9;
+  position: absolute;
+  top: 43%;
+  transform: translateY(-43%);
+  left: -26px;
+  transition: 0.3s;
+  width: calc(100% + 52px);
+}
+
+.slider-btn button {
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--BG);
+  border-radius: 50%;
+  transition: 0.3s;
+  transform: scale(1);
+  background: var(--colorT);
+}
+
+.slider-btn button:hover {
+  transform: scale(1.15);
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  position: relative;
+  border-radius: 50%;
+  font-size: 21px;
+  transition: 0.3s;
+  transform: scale(1);
+  color: var(--BG);
+}
+
+.fa-chevron-left {
+  left: -1px;
+}
+
+.fa-chevron-right {
+  right: -1px;
+}
+
+/* ANIM ICON ON HOVER */
+
+.slider-btn button:hover>.fa-chevron-left {
+  left: -5px;
+}
+
+.slider-btn button:hover>.fa-chevron-right {
+  right: -5px;
+}
+
+#silder-btn-right {
+  float: right;
+}
+
+#silder-btn-left::after, #silder-btn-right::after {
+  position: absolute;
+  top: -30px;
+  max-width: 333px;
+  height: auto;
+  line-height: 19px;
+  border: 1px solid var(--colorT);
+  transition: 0.3s;
+  opacity: 0;
+  white-space: nowrap;
+  padding: 1px 5px;
+  border-radius: 1px;
+  color: var(--colorT);
+  pointer-events: none;
+  background: var(--BG);
+}
+
+#silder-btn-left:hover::after, #silder-btn-right:hover::after {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#slider-imageCont {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.slider-image {
+  display: inline-block;
+  position: relative;
+  width: calc(100%);
+  height: calc(100% - 50px);
+  overflow: hidden;
+  right: 0%;
+  margin: 15px 0;
+  transition: 0.35s;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  transition: 0.27s;
+  transform: scale(0.9);
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.slider-image.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* NEW PROJECT MESSAGE */
+
+.projectCont {
+  position: absolute;
+  right: 0;
+}
+
+.newProject, .updateProject {
+  position: relative;
+  display: none;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 6px 15px;
+}
+
+.newProject {
+  background: rgb(214, 46, 46);
+}
+
+.newProject.isNew {
+  display: block;
+}
+
+.updateProject {
+  background: rgb(0, 119, 255);
+}
+
+.updateProject.isUpdate {
+  display: block;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1180px) {
+  .slider {
+    margin: 10px auto 0 auto;
+  }
+  .slider-btn {
+    left: 5px;
+    width: calc(100% - 10px);
+  }
+  .slider-image {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+  }
+  .slider-content {
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .slider-content {
+    height: 550px;
+  }
+  .slider-image {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .slider-content {
+    height: 455px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .slider-content {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .otherSlideHide {
+    height: 300px;
+  }
+}

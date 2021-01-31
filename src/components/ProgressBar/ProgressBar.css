@@ -1,0 +1,12 @@
+#progressCont {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+}
+
+#progressValue {
+  width: 50%;
+  height: 100%;
+  transition: 0.1s;
+  background: rgb(2, 141, 255);
+}

@@ -1,0 +1,59 @@
+footer {
+  width: 100%;
+  margin-top: 110px;
+  position: relative;
+  text-align: center;
+  height: 200px;
+  border-top: 1px solid rgba(146, 146, 146, 0.15);
+  background: var(--BG);
+}
+
+footer a {
+  position: relative;
+  padding: 10px;
+  margin: 15px;
+  transition: 0.1s;
+  font-weight: 100;
+  color: var(--colorT);
+  border: 1px solid var(--colorT);
+  letter-spacing: 3px;
+  font-size: 23px;
+  transform: rotate(45deg);
+}
+
+footer a:hover {
+  color: var(--footer);
+  background: var(--colorT);
+}
+
+#footer_MainCont {
+  position: relative;
+  max-width: var(--maxWidth);
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+}
+
+#updateSite {
+  position: relative;
+  top: 30px;
+  font-weight: bold;
+  color: var(--footerTxt);
+}
+
+#footer_Cont {
+  position: relative;
+  top: 83px;
+  transform: translateY(-50%);
+}
+
+.fa-vk, .fa-github {
+  position: relative;
+  top: 4px;
+  padding: 0;
+  font-size: 35px;
+}
+
+.fa-github {
+  left: 1px;
+}
