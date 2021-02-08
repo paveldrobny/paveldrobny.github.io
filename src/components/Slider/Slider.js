@@ -4,20 +4,17 @@ import SliderPhoto from "./SliderPhoto";
 import "./Slider.css";
 
 function Slider() {
-  const [count, setCount] = useState(0);
   const [current, setCurrent] = useState(0);
   const [navButtons, setNavButtons] = useState([
     {
       idT: "silder-btn-left",
       class: "fas fa-chevron-left",
       isLeft: true,
-      isShow: true,
     },
     {
       idT: "silder-btn-right",
       class: "fas fa-chevron-right",
       isLeft: false,
-      isShow: false,
     },
   ]);
   const [sliders, setSliders] = useState([

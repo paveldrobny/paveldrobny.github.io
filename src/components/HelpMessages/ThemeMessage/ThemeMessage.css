@@ -1,6 +1,5 @@
 #themeMessage {
     display: block;
-    position: absolute;
     width: auto;
     right: 10px;
     visibility: collapse;
@@ -15,9 +14,12 @@
     visibility: visible;
 }
 
+#themeMessage, #themeMessage::before, #themeMessage::after {
+    position: absolute;
+}
+
 #themeMessage::before {
     content: "";
-    position: absolute;
     top: -2px;
     right: -2px;
     bottom: -2px;
@@ -47,7 +49,6 @@
 
 #themeMessage::after {
     content: "";
-    position: absolute;
 }
 
 #msgTextMain {

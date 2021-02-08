@@ -1,40 +1,46 @@
 .slider-content {
-  position: relative;
   overflow: hidden;
-  transition: 0.3s;
-  max-width: 1300px;
   margin: 80px auto 30px auto;
   height: 730px;
-  background: transparent;
+}
+
+.slider-content, .slider, .slider-btn button, .fa-chevron-left, .fa-chevron-right, .slider-image, .newProject, .updateProject {
+  position: relative;
+}
+
+.slider-content, .slider, .slider-btn, .slider-btn button, #silder-btn-left::after, #silder-btn-right::after, .fa-chevron-left, .fa-chevron-right, #slider-imageCont {
+  transition: 0.3s;
+}
+
+.slider-content, #slider-imageCont, .slider-image {
+  width: 100%;
+}
+
+.slider-btn, #silder-btn-left::after, #silder-btn-right::after, #slider-imageCont, .projectCont {
+  position: absolute;
 }
 
 .slider {
-  position: relative;
   max-width: 1200px;
   margin: 10px auto 0 auto;
   padding-top: 30px;
   height: calc(100% - 20px);
-  transition: 0.3s;
 }
 
 .slider-btn {
   z-index: 9;
-  position: absolute;
   top: 43%;
   transform: translateY(-43%);
   left: -26px;
-  transition: 0.3s;
   width: calc(100% + 52px);
 }
 
 .slider-btn button {
   cursor: pointer;
-  position: relative;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border: 4px solid var(--BG);
   border-radius: 50%;
-  transition: 0.3s;
   transform: scale(1);
   background: var(--colorT);
 }
@@ -44,10 +50,8 @@
 }
 
 .fa-chevron-left, .fa-chevron-right {
-  position: relative;
   border-radius: 50%;
-  font-size: 21px;
-  transition: 0.3s;
+  font-size: 27px;
   transform: scale(1);
   color: var(--BG);
 }
@@ -75,13 +79,11 @@
 }
 
 #silder-btn-left::after, #silder-btn-right::after {
-  position: absolute;
   top: -30px;
   max-width: 333px;
   height: auto;
   line-height: 19px;
   border: 1px solid var(--colorT);
-  transition: 0.3s;
   opacity: 0;
   white-space: nowrap;
   padding: 1px 5px;
@@ -97,30 +99,24 @@
 }
 
 #slider-imageCont {
-  position: absolute;
   top: 0;
-  width: 100%;
   height: 100%;
   left: 0;
-  transition: 0.3s;
   white-space: nowrap;
 }
 
 .slider-image {
   display: inline-block;
-  position: relative;
-  width: calc(100%);
   height: calc(100% - 50px);
   overflow: hidden;
   right: 0%;
   margin: 15px 0;
-  transition: 0.35s;
+  transition: 0.55s;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
-  transition: 0.27s;
-  transform: scale(0.9);
+  opacity: 0.9;
+  transform: scale(.95);
   box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -132,12 +128,10 @@
 /* NEW PROJECT MESSAGE */
 
 .projectCont {
-  position: absolute;
   right: 0;
 }
 
 .newProject, .updateProject {
-  position: relative;
   display: none;
   color: white;
   letter-spacing: 1px;
@@ -145,20 +139,16 @@
   padding: 6px 15px;
 }
 
+.newProject.isNew, .updateProject.isUpdate {
+  display: block;
+}
+
 .newProject {
   background: rgb(214, 46, 46);
 }
 
-.newProject.isNew {
-  display: block;
-}
-
 .updateProject {
   background: rgb(0, 119, 255);
-}
-
-.updateProject.isUpdate {
-  display: block;
 }
 
 /* MEDIA */
@@ -168,8 +158,8 @@
     margin: 10px auto 0 auto;
   }
   .slider-btn {
-    left: 5px;
-    width: calc(100% - 10px);
+    left: 15px;
+    width: calc(100% - 30px);
   }
   .slider-image {
     margin: 0 10px;

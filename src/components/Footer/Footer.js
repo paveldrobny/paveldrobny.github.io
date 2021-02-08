@@ -26,7 +26,6 @@ function Footer() {
 
   return (
     <footer>
-      <div id="footer_MainCont">
         <div id="updateSite">Update: {update}</div>
         <div id="footer_Cont">
           {links.map((link, index) => {
@@ -37,7 +36,6 @@ function Footer() {
             );
           })}
         </div>
-      </div>
     </footer>
   );
 }
