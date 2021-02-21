@@ -5,7 +5,7 @@
   height: 65px;
   position: fixed;
   z-index: 999;
-  transition: 0.15s;
+  transition: box-shadow .15s;
   background: var(--BG);
 }
 
