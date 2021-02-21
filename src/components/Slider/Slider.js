@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import firebase from "firebase";
 import SliderButton from "./SliderButton";
 import SliderPhoto from "./SliderPhoto";
 import "./Slider.css";
+import Loading from "../Loading/Loading";
 
 function Slider() {
   const [current, setCurrent] = useState(0);
@@ -17,18 +19,24 @@ function Slider() {
       isLeft: false,
     },
   ]);
-  const [sliders, setSliders] = useState([
-    {
-      img: "Cards/cards_UE4_SideGame.jpg",
-      newProject: false,
-      updateProject: false,
-    },
-    {
-      img: "Slides/slide_1.jpg",
-      newProject: false,
-      updateProject: false,
-    },
-  ]);
+  const [sliders, setSliders] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+
+  const db = firebase.firestore();
+
+  useEffect(() => {
+    const slidersData = [];
+
+    db.collection("Sliders")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          slidersData.push(doc.data());
+        });
+        setSliders(slidersData);
+        setLoading(false);
+      });
+  }, []);
 
   function changeSlide(isBack) {
     if (isBack) {
@@ -41,30 +49,36 @@ function Slider() {
   return (
     <div className="slider-content">
       <div className="slider">
-        <div className={"slider-btn"}>
-          {navButtons.map((navBtn, index) => {
-            return (
-              <SliderButton
-                key={index}
-                id={navBtn.idT}
-                onClick={() => changeSlide(navBtn.isLeft)}
-                icon={navBtn.class}
-              ></SliderButton>
-            );
-          })}
-        </div>
-        <div id="slider-imageCont">
-          {sliders.map((slider, index) => {
-            return (
-              <SliderPhoto
-                key={index}
-                index={index}
-                slider={slider}
-                current={current}
-              ></SliderPhoto>
-            );
-          })}
-        </div>
+        {isLoading ? (
+          <Loading/>
+        ) : (
+          <div>
+            <div className={"slider-btn"}>
+              {navButtons.map((navBtn, index) => {
+                return (
+                  <SliderButton
+                    key={index}
+                    id={navBtn.idT}
+                    onClick={() => changeSlide(navBtn.isLeft)}
+                    icon={navBtn.class}
+                  ></SliderButton>
+                );
+              })}
+            </div>
+            <div id="slider-imageCont">
+              {sliders.map((slider, index) => {
+                return (
+                  <SliderPhoto
+                    key={index}
+                    index={index}
+                    slider={slider}
+                    current={current}
+                  ></SliderPhoto>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

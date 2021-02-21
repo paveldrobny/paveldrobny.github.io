@@ -5,9 +5,7 @@ function SliderPhoto({ slider, index, current }) {
     <div
       className={index === current ? "slider-image active" : "slider-image"}
       style={{
-        backgroundImage: `url(${
-          require("../../assets/" + slider.img).default
-        })`,
+        backgroundImage: `url(${slider.img})`,
         right: `${current * 100}%`,
       }}
     >

@@ -7,9 +7,7 @@ function Card({ card }) {
         <div
           className="card-img"
           style={{
-            backgroundImage: `url(${
-              require("../../assets/" + card.img).default
-            })`,
+            backgroundImage: `url(${card.img})`,
           }}
         ></div>
       </div>
