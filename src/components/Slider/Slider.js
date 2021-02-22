@@ -28,6 +28,7 @@ function Slider() {
     const slidersData = [];
 
     db.collection("Sliders")
+      .orderBy("id", "desc")
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -50,7 +51,7 @@ function Slider() {
     <div className="slider-content">
       <div className="slider">
         {isLoading ? (
-          <Loading/>
+          <Loading />
         ) : (
           <div>
             <div className={"slider-btn"}>
