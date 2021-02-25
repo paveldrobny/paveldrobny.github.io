@@ -1,6 +1,6 @@
 import React from "react";
 
-function SliderPhoto({ slider, index, current }) {
+function SliderPhoto({ slider, index, current, name }) {
   return (
     <div
       className={index === current ? "slider-image active" : "slider-image"}
@@ -9,16 +9,9 @@ function SliderPhoto({ slider, index, current }) {
         right: `${current * 100}%`,
       }}
     >
-      <div className="projectCont">
-        <div className={`newProject ${slider.newProject ? "isNew" : ""}`}>
-          NEW!
-        </div>
-        <div
-          className={`updateProject ${slider.updateProject ? "isUpdate" : ""}`}
-        >
-          UPDATE!
-        </div>
-      </div>
+    <div className="projectInfo">
+       <div className="projectName"><i>{name}</i></div>
+    </div>
     </div>
   );
 }

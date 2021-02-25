@@ -12,7 +12,7 @@ function Card({ card }) {
         ></div>
       </div>
       <div className="card_view_content">
-        <div className="card_title">{card.name}</div>
+        <div className="card_title"><i>{card.name}</i></div>
         <div className="card_info">
           <b>Using: {card.using} </b>
         </div>

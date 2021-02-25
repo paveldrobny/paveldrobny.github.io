@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   height: 65px;
-  position: fixed;
+  position: sticky;
   z-index: 999;
   transition: box-shadow .15s;
   background: var(--BG);

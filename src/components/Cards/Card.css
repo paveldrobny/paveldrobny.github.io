@@ -8,7 +8,6 @@ section {
   z-index: 99;
   margin-left: auto;
   margin-right: auto;
-  background: transparent;
 }
 
 .projects {
@@ -19,7 +18,7 @@ section {
   position: relative;
   width: 560px;
   height: 490px;
-  margin: 20px;
+  margin: 20px 15px;
   box-sizing: border-box;
   overflow: hidden;
   text-align: center;
@@ -27,8 +26,8 @@ section {
   transition: .30s;
   border-radius: 5px;
   border: 1px solid rgba(139, 139, 139, 0.15);
-  -webkit-box-shadow: 0 -1px 5px rgb(0 0 0 / 5%);
-  box-shadow: 0 1px 5px rgb(0 0 0 / 5%);
+  -webkit-box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
   background: var(--bgCards);
 }
 

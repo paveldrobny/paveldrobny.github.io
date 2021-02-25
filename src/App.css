@@ -40,7 +40,7 @@ button {
 
 :root {
   --BG: rgb(244, 248, 251);
-  --maxWidth: 1200px;
+  --maxWidth: 1180px;
   --bgCards: #fff;
   --colorT: black;
   --colorGray: gray;

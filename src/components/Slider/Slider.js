@@ -4,6 +4,7 @@ import SliderButton from "./SliderButton";
 import SliderPhoto from "./SliderPhoto";
 import "./Slider.css";
 import Loading from "../Loading/Loading";
+import SliderDots from "./SliderDots";
 
 function Slider() {
   const [current, setCurrent] = useState(0);
@@ -47,6 +48,10 @@ function Slider() {
     }
   }
 
+  function setDotSlider(index) {
+    setCurrent(index);
+  }
+
   return (
     <div className="slider-content">
       <div className="slider">
@@ -66,6 +71,7 @@ function Slider() {
                 );
               })}
             </div>
+            <div id="slider-title">Lates updates</div>
             <div id="slider-imageCont">
               {sliders.map((slider, index) => {
                 return (
@@ -74,7 +80,20 @@ function Slider() {
                     index={index}
                     slider={slider}
                     current={current}
+                    name={slider.name}
                   ></SliderPhoto>
+                );
+              })}
+            </div>
+            <div id="slider-dotsCont">
+              {sliders.map((slider, index) => {
+                return (
+                  <SliderDots
+                    key={index}
+                    index={index}
+                    current={current}
+                    onClick={() => setDotSlider(index)}
+                  ></SliderDots>
                 );
               })}
             </div>
