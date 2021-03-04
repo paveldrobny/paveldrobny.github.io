@@ -19,7 +19,7 @@
 }
 
 .slider {
-  max-width: 1170px;
+  max-width: 1155px;
   margin: 10px auto 0 auto;
   height: calc(100% - 20px);
 }
@@ -111,12 +111,12 @@
 
 .slider-image {
   display: inline-block;
-  margin: 5px 10px;
-  width: calc(100% - 20px);
+  margin: 5px;
+  width: calc(100% - 10px);
   height: calc(100% - 15px);
   overflow: hidden;
   right: 0%;
-  transition: 0.55s;
+  transition: .5s;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -137,6 +137,10 @@
   font-size: 19px;
   border-top-left-radius: 3px;
   background: rgba(5, 5, 5, 0.8);
+}
+
+.projectName i{
+  display: block;
 }
 
 #slider-dotsCont{
@@ -171,29 +175,20 @@
   }
 }
 
-@media screen and (max-width: 900px) {
-  #slider-imageCont {
-    height: 550px;
-  }
-  .slider-image {
-    background-size: cover;
-  }
-}
-
 @media screen and (max-width: 750px) {
   #slider-imageCont {
-    height: 455px;
+    height: 360px;
   }
 }
 
 @media screen and (max-width: 475px) {
   #slider-imageCont {
-    height: 350px;
+    height: 330px;
   }
 }
 
 @media screen and (max-width: 430px) {
-  .otherSlideHide {
-    height: 300px;
+  #slider-imageCont {
+    height: 270px;
   }
 }

@@ -28,12 +28,16 @@ function Slider() {
   useEffect(() => {
     const slidersData = [];
 
-    db.collection("Sliders")
+    db.collection("Projects")
       .orderBy("id", "desc")
       .get()
       .then((querySnapshot) => {
+        let size = querySnapshot.size;
         querySnapshot.forEach((doc) => {
-          slidersData.push(doc.data());
+          //get the last two added projects
+          if(doc.id >= size - 1 && doc.id <= size ){
+            slidersData.push(doc.data());
+          }
         });
         setSliders(slidersData);
         setLoading(false);
@@ -80,7 +84,6 @@ function Slider() {
                     index={index}
                     slider={slider}
                     current={current}
-                    name={slider.name}
                   ></SliderPhoto>
                 );
               })}
