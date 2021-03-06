@@ -34,8 +34,9 @@ function Slider() {
       .then((querySnapshot) => {
         let size = querySnapshot.size;
         querySnapshot.forEach((doc) => {
-          //get the last two added projects
-          if(doc.id >= size - 1 && doc.id <= size ){
+          let id = doc.data().id;
+          if (id >= size - 1 && id <= size) {
+            console.log(doc.id)
             slidersData.push(doc.data());
           }
         });
