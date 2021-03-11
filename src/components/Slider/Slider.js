@@ -21,6 +21,7 @@ function Slider() {
     },
   ]);
   const [sliders, setSliders] = useState([]);
+  const [isSliderMove, setSliderMove] = useState(true);
   const [isLoading, setLoading] = useState(true);
 
   const db = firebase.firestore();
@@ -36,7 +37,7 @@ function Slider() {
         querySnapshot.forEach((doc) => {
           let id = doc.data().id;
           if (id >= size - 1 && id <= size) {
-            console.log(doc.id)
+            console.log(doc.id);
             slidersData.push(doc.data());
           }
         });
@@ -45,11 +46,19 @@ function Slider() {
       });
   }, []);
 
+  function sliderTimer() {
+    setTimeout(() => setSliderMove(true), 500);
+  }
+
   function changeSlide(isBack) {
-    if (isBack) {
-      setCurrent(current === 0 ? sliders.length - 1 : current - 1);
-    } else {
-      setCurrent(current === sliders.length - 1 ? 0 : current + 1);
+    if (isSliderMove) {
+      setSliderMove(false);
+      sliderTimer();
+      if (isBack) {
+        setCurrent(current === 0 ? sliders.length - 1 : current - 1);
+      } else {
+        setCurrent(current === sliders.length - 1 ? 0 : current + 1);
+      }
     }
   }
 
