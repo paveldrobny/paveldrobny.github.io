@@ -125,6 +125,7 @@
 }
 
 #progressWrapper{
+  overflow: hidden;
   width: calc(100% - 10px);
   margin: -1px 5px;
 }
