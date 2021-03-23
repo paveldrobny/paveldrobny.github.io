@@ -1,12 +1,12 @@
 import React from "react";
 
-function SliderPhoto({ slider, index, current }) {
+function SliderPhoto({ slider, index, currentT }) {
   return (
     <div
-      className={index === current ? "slider-image active" : "slider-image"}
+      className={index === currentT ? "slider-image active" : "slider-image"}
       style={{
         backgroundImage: `url(${slider.img})`,
-        right: `${current * 100}%`,
+        right: `${currentT * 100}%`,
       }}
     >
       <div className="projectInfo">

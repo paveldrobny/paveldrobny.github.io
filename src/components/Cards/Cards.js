@@ -3,7 +3,7 @@ import firebase from "firebase";
 import Card from "./Card";
 import "./Card.css";
 
-function CardsView() {
+function Cards() {
   const [cards, setCards] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const db = firebase.firestore();
@@ -53,4 +53,4 @@ function CardsView() {
   );
 }
 
-export default CardsView;
+export default Cards;

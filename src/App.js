@@ -1,15 +1,15 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Slider from "./components/Slider/Slider";
-import CardsView from "./components/Cards/CardsView";
-import Footer from "./components/Footer/Footer";
+import Header from "./components/Header"
+import Slider from "./components/Slider";
+import Cards from "./components/Cards";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Slider />
-      <CardsView />
+      <Cards />
       <Footer />
     </div>
   );

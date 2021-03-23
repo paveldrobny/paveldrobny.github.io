@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ThemeMessage from "../HelpMessages/ThemeMessage/ThemeMessage";
-import ProgressBar from "../ProgressBar/ProgressBar";
 import "./Header.css";
+import ThemeMessage from "../HelpMessages/Theme";
+import ProgressBar from "../ProgressBar";
 
 function Header() {
   const [percentage, setPercentage] = useState(0);
@@ -68,7 +68,7 @@ function Header() {
 
   return (
     <div id="header" className={headerActive}>
-      <ProgressBar value={percentage} />
+      <ProgressBar value={percentage} styleType={"headerV"}/>
       <div className="header-cont">
         <div className="header-title">Pavel Drobny</div>
         <div className="header-navBtn">

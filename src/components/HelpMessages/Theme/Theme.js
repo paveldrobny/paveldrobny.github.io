@@ -1,7 +1,7 @@
 import React from "react";
-import "./ThemeMessage.css";
+import "./Theme.css";
 
-function ThemeMessage({isActive}) {
+function Theme({isActive}) {
   return (
     <div id="themeMessage" className={isActive ? "active" : ""}>
       <div id="msgTextMain">NEW THEME!</div>
@@ -13,4 +13,4 @@ function ThemeMessage({isActive}) {
   );
 }
 
-export default ThemeMessage;
+export default Theme;

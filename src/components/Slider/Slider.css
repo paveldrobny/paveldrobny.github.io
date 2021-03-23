@@ -89,7 +89,7 @@
 }
 
 #slider-title{
-  margin: 10px 16px;
+  margin: 10px;
   padding-bottom: 7px;
   margin-bottom: 12px;
   font-size: 20px;
@@ -120,8 +120,13 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 5px;
+  border-radius: 1px;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+
+#progressWrapper{
+  width: calc(100% - 10px);
+  margin: -1px 5px;
 }
 
 .projectInfo{
@@ -143,23 +148,40 @@
   display: block;
 }
 
+/* DOTS */
+
 #slider-dotsCont{
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .slider-dots {
+  position: relative;
   cursor: pointer;
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50px;
   margin: 0 5px;
-  background: rgb(158, 158, 158);
+  border: 2px solid rgb(0, 140, 255);
 }
 
-.slider-dots.active {
+.slider-dots::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transition: .3s;
+  transform: translate(-50%, -50%) scale(0);
   background: rgb(0, 140, 255);
+}
+
+.slider-dots.active::after {
+  content: "";
+  transform: translate(-50%, -50%) scale(1);
 }
 
 

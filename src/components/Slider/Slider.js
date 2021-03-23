@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import "./Slider.css";
 import firebase from "firebase";
 import SliderButton from "./SliderButton";
 import SliderPhoto from "./SliderPhoto";
-import "./Slider.css";
-import Loading from "../Loading/Loading";
+import Loading from "../Loading";
 import SliderDots from "./SliderDots";
+import ProgressBar from "../ProgressBar";
 
 function Slider() {
   const [current, setCurrent] = useState(0);
@@ -22,9 +23,10 @@ function Slider() {
   ]);
   const [sliders, setSliders] = useState([]);
   const [isSliderMove, setSliderMove] = useState(true);
+  const [progress, setProgress] = useState(1);
   const [isLoading, setLoading] = useState(true);
-
   const db = firebase.firestore();
+  const time = 5000;
 
   useEffect(() => {
     const slidersData = [];
@@ -37,7 +39,6 @@ function Slider() {
         querySnapshot.forEach((doc) => {
           let id = doc.data().id;
           if (id >= size - 1 && id <= size) {
-            console.log(doc.id);
             slidersData.push(doc.data());
           }
         });
@@ -45,6 +46,21 @@ function Slider() {
         setLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    const forward = (current + 1) % sliders.length;
+    const id = setTimeout(() => setCurrent(forward), time);
+    setProgress(0);
+    return () => clearTimeout(id);
+  }, [current, sliders.length]);
+
+  useEffect(() => {
+    const id = setTimeout(
+      () => setProgress(progress + 1),
+      (time / 100) - time / 1000
+    );
+    return () => clearTimeout(id);
+  }, [progress]);
 
   function sliderTimer() {
     setTimeout(() => setSliderMove(true), 500);
@@ -60,10 +76,6 @@ function Slider() {
         setCurrent(current === sliders.length - 1 ? 0 : current + 1);
       }
     }
-  }
-
-  function setDotSlider(index) {
-    setCurrent(index);
   }
 
   return (
@@ -86,6 +98,9 @@ function Slider() {
               })}
             </div>
             <div id="slider-title">Lates updates</div>
+            <div id="progressWrapper">
+                <ProgressBar value={progress} styleType={"sliderV"} />
+              </div>
             <div id="slider-imageCont">
               {sliders.map((slider, index) => {
                 return (
@@ -93,7 +108,7 @@ function Slider() {
                     key={index}
                     index={index}
                     slider={slider}
-                    current={current}
+                    currentT={current}
                   ></SliderPhoto>
                 );
               })}
@@ -104,8 +119,8 @@ function Slider() {
                   <SliderDots
                     key={index}
                     index={index}
-                    current={current}
-                    onClick={() => setDotSlider(index)}
+                    currentT={current}
+                    onClick={() => setCurrent(index)}
                   ></SliderDots>
                 );
               })}

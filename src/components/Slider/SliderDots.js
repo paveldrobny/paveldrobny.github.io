@@ -1,9 +1,9 @@
 import React from "react";
 
-function SliderDots({index, current, onClick}) {
+function SliderDots({index, currentT, onClick}) {
   return (
     <div
-      className={index === current ? "slider-dots active" : "slider-dots"}
+      className={index === currentT ? "slider-dots active" : "slider-dots"}
       onClick={onClick}
     >
     </div>
