@@ -1,6 +1,6 @@
 import React from "react";
 
-function SliderPhoto({ slider, index, currentT }) {
+const SliderPhoto = ({ slider, index, currentT }) => {
   return (
     <div
       className={index === currentT ? "slider-image active" : "slider-image"}
@@ -11,12 +11,14 @@ function SliderPhoto({ slider, index, currentT }) {
     >
       <div className="projectInfo">
         <div className="projectName">
-          <i><b>{slider.name}</b></i>
+          <i>
+            <b>{slider.name}</b>
+          </i>
           {slider.using}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default SliderPhoto;

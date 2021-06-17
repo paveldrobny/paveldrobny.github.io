@@ -3,7 +3,7 @@ import firebase from "firebase";
 import Card from "./Card";
 import "./Card.css";
 
-function Cards() {
+const Cards = () => {
   const [cards, setCards] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const db = firebase.firestore();
@@ -24,19 +24,19 @@ function Cards() {
       });
   }, []);
 
-  function updateProjectData(repo, index) {
+  const updateProjectData = (repo, index) => {
     let result = "";
     let urlUpdate = `https://api.github.com/repos/paveldrobny/${repo}`;
     fetch(urlUpdate)
       .then((res) => res.json())
       .then((out) => {
         result = out.updated_at.slice(0, 10);
-        
+
         db.collection("Projects").doc(index).update({
           update: result,
         });
       });
-  }
+  };
 
   return (
     <div className="projects">
@@ -51,6 +51,6 @@ function Cards() {
       </section>
     </div>
   );
-}
+};
 
 export default Cards;

@@ -1,10 +1,10 @@
 import "./App.css";
-import Header from "./components/Header"
+import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
@@ -13,6 +13,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -3,7 +3,7 @@ import "./Header.css";
 import ThemeMessage from "../HelpMessages/Theme";
 import ProgressBar from "../ProgressBar";
 
-function Header() {
+const Header = () => {
   const [percentage, setPercentage] = useState(0);
   const [isDarkTheme, setDarkTheme] = useState(
     localStorage.getItem("isDarkTheme") ? true : false
@@ -15,16 +15,15 @@ function Header() {
   let headerActive = "";
 
   useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
     getValue();
   });
-
-  window.addEventListener("scroll", handleScroll);
 
   if (window.scrollY >= 15) {
     headerActive += "active";
   }
 
-  function handleScroll() {
+  const handleScroll = () => {
     let scrollStart =
         document.body.scrollTop || document.documentElement.scrollTop,
       scrollHeight =
@@ -32,20 +31,20 @@ function Header() {
 
     let percentValue = (scrollStart / scrollHeight) * 100;
     setPercentage(percentValue);
-  }
+  };
 
-  function changeTheme() {
+  const changeTheme = () => {
     store();
     setMessageTheme(false);
     getValue();
-  }
+  };
 
-  function store() {
+  const store = () => {
     localStorage.setItem("isDarkTheme", isDarkTheme);
     localStorage.setItem("isMessageTheme", isMessageTheme);
-  }
+  };
 
-  function getValue() {
+  const getValue = () => {
     let bodyClass = document.body.classList,
       htmlClass = document.documentElement.classList;
 
@@ -64,11 +63,11 @@ function Header() {
     if (localStorage.getItem("isMessageTheme") === "false") {
       setMessageTheme(false);
     }
-  }
+  };
 
   return (
     <div id="header" className={headerActive}>
-      <ProgressBar value={percentage} styleType={"headerV"}/>
+      <ProgressBar value={percentage} styleType={"headerV"} />
       <div className="header-cont">
         <div className="header-title">Pavel Drobny</div>
         <div className="header-navBtn">
@@ -82,6 +81,6 @@ function Header() {
       <ThemeMessage isActive={isMessageTheme}></ThemeMessage>
     </div>
   );
-}
+};
 
 export default Header;

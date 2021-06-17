@@ -7,7 +7,7 @@ import Loading from "../Loading";
 import SliderDots from "./SliderDots";
 import ProgressBar from "../ProgressBar";
 
-function Slider() {
+const Slider = () => {
   const [current, setCurrent] = useState(0);
   const [navButtons, setNavButtons] = useState([
     {
@@ -57,16 +57,16 @@ function Slider() {
   useEffect(() => {
     const id = setTimeout(
       () => setProgress(progress + 1),
-      (time / 100) - time / 1000
+      time / 100 - time / 1000
     );
     return () => clearTimeout(id);
   }, [progress]);
 
-  function sliderTimer() {
+  const sliderTimer = () => {
     setTimeout(() => setSliderMove(true), 500);
-  }
+  };
 
-  function changeSlide(isBack) {
+  const changeSlide = (isBack) => {
     if (isSliderMove) {
       setSliderMove(false);
       sliderTimer();
@@ -76,7 +76,7 @@ function Slider() {
         setCurrent(current === sliders.length - 1 ? 0 : current + 1);
       }
     }
-  }
+  };
 
   return (
     <div className="slider-content">
@@ -99,8 +99,8 @@ function Slider() {
             </div>
             <div id="slider-title">Lates updates</div>
             <div id="progressWrapper">
-                <ProgressBar value={progress} styleType={"sliderV"} />
-              </div>
+              <ProgressBar value={progress} styleType={"sliderV"} />
+            </div>
             <div id="slider-imageCont">
               {sliders.map((slider, index) => {
                 return (
@@ -130,6 +130,6 @@ function Slider() {
       </div>
     </div>
   );
-}
+};
 
 export default Slider;

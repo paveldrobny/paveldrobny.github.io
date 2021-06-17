@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ card }) {
+const Card = ({ card }) => {
   return (
     <div className="card">
       <div className="card_img_Cont">
@@ -12,7 +12,9 @@ function Card({ card }) {
         ></div>
       </div>
       <div className="card_view_content">
-        <div className="card_title"><i>{card.name}</i></div>
+        <div className="card_title">
+          <i>{card.name}</i>
+        </div>
         <div className="card_info">
           <b>Using: {card.using} </b>
         </div>
@@ -37,6 +39,6 @@ function Card({ card }) {
       </div>
     </div>
   );
-}
+};
 
 export default Card;
