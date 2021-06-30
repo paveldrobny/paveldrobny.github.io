@@ -27,22 +27,19 @@ const Slider = () => {
   const [isLoading, setLoading] = useState(true);
   const db = firebase.firestore();
   const time = 5000;
+  const numberToShow = 2;
 
   useEffect(() => {
     const slidersData = [];
 
     db.collection("Projects")
-      .orderBy("id", "desc")
+      .orderBy("update", "desc")
       .get()
       .then((querySnapshot) => {
-        let size = querySnapshot.size;
         querySnapshot.forEach((doc) => {
-          let id = doc.data().id;
-          if (id >= size - 1 && id <= size) {
-            slidersData.push(doc.data());
-          }
+          slidersData.push(doc.data());
         });
-        setSliders(slidersData);
+        setSliders(slidersData.slice(0, numberToShow));
         setLoading(false);
       });
   }, []);
