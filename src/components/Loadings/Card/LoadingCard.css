@@ -1,0 +1,8 @@
+.loadCard {
+    position: relative;
+    width: 560px;
+    height: 490px;
+    margin: 20px 15px;
+    border-radius: 3px;
+    background: rgba(160, 160, 160, 0.26);
+}

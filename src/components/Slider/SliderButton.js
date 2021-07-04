@@ -1,10 +1,20 @@
 import React from "react";
 
-const SliderButton = ({ id, icon, onClick }) => {
+const SliderButton = (props) => {
   return (
-    <button onClick={onClick} id={id}>
-      <i className={icon}></i>
-    </button>
+    <div className="slider-btn">
+      {props.navButtons.map((navBtn, index) => {
+        return (
+          <button
+            key={index}
+            onClick={() => props.changeSlide(navBtn.isLeft)}
+            id={navBtn.id}
+          >
+            <i className={navBtn.class}></i>
+          </button>
+        );
+      })}
+    </div>
   );
 };
 

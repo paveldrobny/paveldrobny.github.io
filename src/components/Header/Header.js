@@ -67,7 +67,7 @@ const Header = () => {
 
   return (
     <div id="header" className={headerActive}>
-      <ProgressBar value={percentage} styleType={"headerV"} />
+      <ProgressBar value={percentage} styleType={"header"} />
       <div className="header-cont">
         <div className="header-title">Pavel Drobny</div>
         <div className="header-navBtn">

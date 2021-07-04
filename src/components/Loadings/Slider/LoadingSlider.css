@@ -1,0 +1,22 @@
+.LoadSliderMain {
+    margin-top: -13px;
+    overflow: hidden;
+    width: calc(100% - 10px);
+}
+
+.LoadSlider {
+    background: rgba(160, 160, 160, 0.26);
+}
+
+.LoadSliderText {
+    position: relative;
+}
+
+.LoadSliderText::after {
+    display: block;
+    content: "";
+    width: 190px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: rgba(160, 160, 160, 0.26);
+}

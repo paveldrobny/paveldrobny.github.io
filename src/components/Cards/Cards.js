@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase";
 import Card from "./Card";
+import LoadingCard from "../Loadings/Card";
 import "./Card.css";
 
 const Cards = () => {
@@ -42,7 +43,7 @@ const Cards = () => {
     <div className="projects">
       <section>
         {isLoading ? (
-          <div id="cardsLoading">Loading projects...</div>
+          <LoadingCard />
         ) : (
           cards.map((card, index) => {
             return <Card card={card} key={index}></Card>;
