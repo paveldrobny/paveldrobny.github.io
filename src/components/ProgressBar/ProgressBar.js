@@ -3,10 +3,9 @@ import "./ProgressBar.css";
 
 const ProgressBar = ({ value, styleType }) => {
   return (
-    <div id="progressCont">
+    <div id="progress-content">
       <div
-        id="progressValue"
-        className={styleType}
+        className={`progress-value ${styleType}`}
         style={{ width: `${value}%` }}
       ></div>
     </div>

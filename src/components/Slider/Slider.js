@@ -3,7 +3,7 @@ import "./Slider.css";
 import firebase from "firebase";
 import SliderButton from "./SliderButton";
 import SliderPhoto from "./SliderPhoto";
-import Loading from "../Loading";
+import LoadingSlider from "../Loadings/Slider";
 import SliderDots from "./SliderDots";
 import ProgressBar from "../ProgressBar";
 
@@ -11,12 +11,12 @@ const Slider = () => {
   const [current, setCurrent] = useState(0);
   const [navButtons, setNavButtons] = useState([
     {
-      idT: "silder-btn-left",
+      id: "silder-btn-left",
       class: "fas fa-chevron-left",
       isLeft: true,
     },
     {
-      idT: "silder-btn-right",
+      id: "silder-btn-right",
       class: "fas fa-chevron-right",
       isLeft: false,
     },
@@ -79,49 +79,20 @@ const Slider = () => {
     <div className="slider-content">
       <div className="slider">
         {isLoading ? (
-          <Loading />
+          <LoadingSlider />
         ) : (
           <div>
-            <div className={"slider-btn"}>
-              {navButtons.map((navBtn, index) => {
-                return (
-                  <SliderButton
-                    key={index}
-                    id={navBtn.idT}
-                    onClick={() => changeSlide(navBtn.isLeft)}
-                    icon={navBtn.class}
-                  ></SliderButton>
-                );
-              })}
-            </div>
+            <SliderButton navButtons={navButtons} changeSlide={changeSlide} />
             <div id="slider-title">Lates updates</div>
-            <div id="progressWrapper">
-              <ProgressBar value={progress} styleType={"sliderV"} />
+            <div id="progress-Wrapper">
+              <ProgressBar value={progress} styleType={"_slider"} />
             </div>
-            <div id="slider-imageCont">
-              {sliders.map((slider, index) => {
-                return (
-                  <SliderPhoto
-                    key={index}
-                    index={index}
-                    slider={slider}
-                    currentT={current}
-                  ></SliderPhoto>
-                );
-              })}
-            </div>
-            <div id="slider-dotsCont">
-              {sliders.map((slider, index) => {
-                return (
-                  <SliderDots
-                    key={index}
-                    index={index}
-                    currentT={current}
-                    onClick={() => setCurrent(index)}
-                  ></SliderDots>
-                );
-              })}
-            </div>
+            <SliderPhoto sliders={sliders} current={current} />
+            <SliderDots
+              sliders={sliders}
+              current={current}
+              setCurrent={setCurrent}
+            />
           </div>
         )}
       </div>
