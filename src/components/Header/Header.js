@@ -5,6 +5,7 @@ import ProgressBar from "../ProgressBar";
 
 const Header = () => {
   const [percentage, setPercentage] = useState(0);
+  const [active, setActive] = useState(false);
   const [isDarkTheme, setDarkTheme] = useState(
     localStorage.getItem("isDarkTheme") ? true : false
   );
@@ -12,16 +13,16 @@ const Header = () => {
     localStorage.getItem("isMessageTheme") ? false : true
   );
 
-  let headerActive = "";
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [active]);
+
+  useEffect(() => {
     getValue();
   });
-
-  if (window.scrollY >= 15) {
-    headerActive += "active";
-  }
 
   const handleScroll = () => {
     let scrollStart =
@@ -31,6 +32,8 @@ const Header = () => {
 
     let percentValue = (scrollStart / scrollHeight) * 100;
     setPercentage(percentValue);
+
+    window.scrollY >= 15 ? setActive(true) : setActive(false);
   };
 
   const changeTheme = () => {
@@ -66,7 +69,7 @@ const Header = () => {
   };
 
   return (
-    <div id="header" className={headerActive}>
+    <header id="header" className={`${active ? "activeScroll" : ""}`}>
       <ProgressBar value={percentage} styleType={"_header"} />
       <div className="header-cont">
         <div className="header-title">Pavel Drobny</div>
@@ -79,7 +82,7 @@ const Header = () => {
         </div>
       </div>
       <ThemeMessage isActive={isMessageTheme}></ThemeMessage>
-    </div>
+    </header>
   );
 };
 
