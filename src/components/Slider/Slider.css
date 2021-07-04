@@ -132,7 +132,7 @@
 
 #progress-Wrapper {
   overflow: hidden;
-  width: 100%;
+  width: calc(100% - 10px);
   margin: -1px 5px;
 }
 
