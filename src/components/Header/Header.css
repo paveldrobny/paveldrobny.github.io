@@ -6,7 +6,6 @@
   position: sticky;
   z-index: 999;
   transition: box-shadow .15s;
-  overflow: hidden;
   background: var(--BG);
 }
 
