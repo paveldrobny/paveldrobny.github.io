@@ -1,4 +1,5 @@
 .slider-content {
+  max-width: 1155px;
   margin: 23px auto 20px auto;
 }
 
@@ -19,8 +20,7 @@
 }
 
 .slider {
-  max-width: 1155px;
-  margin: 10px auto 0 auto;
+  margin: 10px 5px 0 5px;
   height: calc(100% - 20px);
   padding-bottom: 5px;
 }
@@ -39,6 +39,7 @@
   height: 50px;
   border-radius: 50%;
   opacity: .7;
+  border: 2px solid rgba(251, 251, 251, .3);
   background: rgba(0, 0, 0, 0.9);
 }
 
@@ -79,7 +80,6 @@
   max-width: 333px;
   height: auto;
   line-height: 19px;
-  border: 1px solid var(--colorT);
   opacity: 0;
   white-space: nowrap;
   padding: 1px 5px;
@@ -109,10 +109,9 @@
   position: relative;
   top: 0;
   height: 650px;
-  left: 0;
-  bottom: 0;
   border-radius: 10px;
   white-space: nowrap;
+  border: 1px solid rgba(235, 235, 235, .1);
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.08);
 }
 
@@ -134,25 +133,29 @@
   overflow: hidden;
   width: calc(100% - 10px);
   margin: -1px 5px;
+  margin-bottom: 3px;
 }
 
 .projectInfo {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 8px;
+  bottom: 8px;
 }
 
 .projectName {
   float: left;
-  color: white;
+  color: rgb(226, 226, 226);
   padding: 7px 12px;
   font-size: 19px;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
+  border: 1px solid rgb(255, 255, 255, .6);
   background: rgb(40, 41, 42);
+}
+
+.projectName i b {
+  color: white;
 }
 
 .projectName i {
@@ -180,8 +183,8 @@
 .slider-dots::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   top: 50%;
   left: 50%;
   border-radius: 50%;
