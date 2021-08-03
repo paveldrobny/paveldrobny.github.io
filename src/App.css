@@ -5,12 +5,8 @@ body {
   background: var(--BG);
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: none;
+::-webkit-scrollbar {  position: absolute;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -20,6 +16,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 
 ul, li {
   margin: 0;
@@ -40,20 +37,20 @@ button {
 
 :root {
   --BG: rgb(244, 248, 251);
-  --maxWidth: 1180px;
-  --bgCards: #fff;
-  --colorT: black;
-  --colorGray: gray;
-  --footer: rgb(241, 241, 241);
-  --footerTxt: rgb(61, 61, 61);
-  --footerLink: black;
+  --max-width: 1370px;
+  --border-outline: 1px solid rgba(139, 139, 139, 0.15);
+  --cards-bg: #fff;
+  --color-text: black;
+  --footer-bg: rgb(246, 246, 246);
+  --footer-text: rgb(61, 61, 61);
+  --footer-link: black;
 }
 
-[class="darkTheme"] {
-  --BG: rgb(27, 27, 27);
-  --bgCards: rgb(21, 21, 21);
-  --colorT: white;
-  --footer: rgb(35, 35, 35);
-  --footerTxt: rgb(161, 161, 161);
-  --footerLink: white;
+[class="dark-theme"] {
+  --BG:  #121212;
+  --cards-bg: #191919;
+  --color-text: rgb(230, 230, 230);
+  --footer-bg: rgb(19, 19, 19);
+  --footer-text: rgb(161, 161, 161);
+  --footer-link: white;
 }

@@ -25,18 +25,20 @@ const Footer = () => {
   });
 
   return (
-    <footer>
-      <div id="updateSite">Update: {update}</div>
-      <div id="footer_Cont">
-        {links.map((link, index) => {
-          return (
-            <a key={index} href={link.href}>
-              <i className={link.class}></i>
-            </a>
-          );
-        })}
-      </div>
-    </footer>
+    <div id="footer-wrapper">
+      <footer>
+        <div id="footer-update-text">Update: {update}</div>
+        <div>
+          {links.map((link, index) => {
+            return (
+              <a key={index} id="footer-link" href={link.href}>
+                <i className={link.class}></i>
+              </a>
+            );
+          })}
+        </div>
+      </footer>
+    </div>
   );
 };
 

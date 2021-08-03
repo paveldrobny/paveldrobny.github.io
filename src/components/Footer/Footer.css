@@ -1,43 +1,48 @@
-footer {
+#footer-wrapper {
+  position: relative;
   width: 100%;
   margin-top: 110px;
-  text-align: center;
-  height: 190px;
-  border-top: 1px solid rgba(146, 146, 146, 0.15);
-  background: var(--BG);
+  height: 200px;
 }
 
-footer a {
+footer {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  border-top: 1px solid rgba(146, 146, 146, 0.15);
+  background: var(--footer-bg);
+}
+
+#footer-update-text {
+  position: relative;
+  font-weight: bold;
+  color: var(--footer-text);
+  height: 90px;
+  line-height: 90px;
+}
+
+#footer-link {
+  position: relative;
   padding: 10px;
   margin: 15px;
   transition: 0.1s;
   font-weight: 100;
-  color: var(--colorT);
-  border: 1px solid var(--colorT);
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+  letter-spacing: 3px;
   font-size: 23px;
+  transform: rotate(45deg);
 }
 
-footer a:hover {
-  color: var(--footer);
-  background: var(--colorT);
+#footer-link:hover {
+  color: var(--footer-bg);
+  background: var(--color-text);
 }
 
-#updateSite {
-  top: 30px;
-  font-weight: bold;
-  color: var(--footerTxt);
-}
-
-#footer_Cont {
-  top: 83px;
-  transform: translateY(-50%);
-}
-
-.fa-vk, .fa-github {
-  top: 4px;
-  font-size: 35px;
-}
-
-footer, footer a, #footer_MainCont, #updateSite, #footer_Cont, .fa-vk, .fa-github {
+.fa-github, .fa-vk {
   position: relative;
+  top: 4px;
+  left: 1px;
+  padding: 0;
+  font-size: 35px;
 }

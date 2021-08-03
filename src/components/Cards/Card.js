@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import Info from "./Info";
+import Link from "./Link";
+import Title from "./Title";
 
 const Card = ({ card }) => {
+  const [cardInfo, setCardInfo] = useState([
+    { name: "Using", property: card.using },
+    { name: "Language", property: card.language },
+    { name: "Update", property: card.update },
+  ]);
+
   return (
     <div className="card">
-      <div className="card_img_Cont">
+      <div className="card-img-content">
         <div
           className="card-img"
           style={{
@@ -11,30 +20,20 @@ const Card = ({ card }) => {
           }}
         ></div>
       </div>
-      <div className="card_view_content">
-        <div className="card_title">
-          <i>{card.name}</i>
-        </div>
-        <div className="card_info">
-          <b>Using: {card.using} </b>
-        </div>
-        <div className="card_info">
-          <b>Language: {card.language}</b>
-        </div>
-        <div className="card_info">
-          <b>Update: {card.update}</b>
-        </div>
-        <div className="card_view">
-          <a
-            target="_blank"
-            className={`btn_Demo ${card.isDemo ? "activeDemo" : ""}`}
-            href={card.urlDemo}
-          >
-            DEMO
-          </a>
-          <a target="_blank" className="btn_Code" href={card.urlCode}>
-            SOURCE CODE
-          </a>
+      <div className="card-view-content">
+        <Title card={card} />
+        <Info cardInfo={cardInfo} />
+        <div className="card-view">
+          <Link
+            card={card.urlDemo}
+            name="DEMO"
+            className={`card-btn btn-demo ${card.isDemo ? "is-active" : ""}`}
+          />
+          <Link
+            card={card.urlCode}
+            name="SOURCE CODE"
+            className="card-btn btn-code"
+          />
         </div>
       </div>
     </div>

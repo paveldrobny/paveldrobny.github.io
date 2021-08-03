@@ -9,17 +9,17 @@
   background: var(--BG);
 }
 
-#header.activeScroll {
+#header.is-active{
   box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
-.header-cont {
+.header-content {
   margin-left: 10px;
   margin-right: 10px;
   height: 100%;
 }
 
-.header-title, .header-navBtn {
+.header-title, .header-nav-btn {
   display: inline-block;
   line-height: 65px;
 }
@@ -30,11 +30,11 @@
   line-height: 61px;
 }
 
-.header-navBtn {
+.header-nav-btn {
   float: right;
 }
 
-#themeBtn {
+#theme-btn {
   cursor: pointer;
   padding: 0 5px;
 }
@@ -43,6 +43,6 @@
   font-size: 18px;
 }
 
-.header-cont, .fa-moon, .header-navBtn ul li a {
-  color: var(--colorT);
+.header-content, .fa-moon, .header-nav-btn ul li a {
+  color: var(--color-text);
 }

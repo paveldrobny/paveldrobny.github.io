@@ -55,12 +55,12 @@ const Header = () => {
       store();
     }
     if (localStorage.getItem("isDarkTheme") === "true") {
-      bodyClass.add("darkTheme");
-      htmlClass.add("darkTheme");
+      bodyClass.add("dark-theme");
+      htmlClass.add("dark-theme");
       setDarkTheme(false);
     } else if (localStorage.getItem("isDarkTheme") === "false") {
-      bodyClass.remove("darkTheme");
-      htmlClass.remove("darkTheme");
+      bodyClass.remove("dark-theme");
+      htmlClass.remove("dark-theme");
       setDarkTheme(true);
     }
     if (localStorage.getItem("isMessageTheme") === "false") {
@@ -69,13 +69,13 @@ const Header = () => {
   };
 
   return (
-    <header id="header" className={`${active ? "activeScroll" : ""}`}>
+    <header id="header" className={`${active ? "is-active" : ""}`}>
       <ProgressBar value={percentage} styleType={"_header"} />
-      <div className="header-cont">
+      <div className="header-content">
         <div className="header-title">Pavel Drobny</div>
-        <div className="header-navBtn">
+        <div className="header-nav-btn">
           <ul>
-            <li id="themeBtn" onClick={changeTheme}>
+            <li id="theme-btn" onClick={changeTheme}>
               <i className="fas fa-moon"></i>
             </li>
           </ul>

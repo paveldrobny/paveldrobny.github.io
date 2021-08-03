@@ -82,12 +82,12 @@ const Slider = () => {
           <LoadingSlider />
         ) : (
           <div>
-            <SliderButton navButtons={navButtons} changeSlide={changeSlide} />
             <div id="slider-title">Lates updates</div>
             <div id="progress-Wrapper">
               <ProgressBar value={progress} styleType={"_slider"} />
             </div>
             <SliderPhoto sliders={sliders} current={current} />
+            <SliderButton navButtons={navButtons} changeSlide={changeSlide} />
             <SliderDots
               sliders={sliders}
               current={current}

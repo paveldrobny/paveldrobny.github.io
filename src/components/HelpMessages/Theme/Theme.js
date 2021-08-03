@@ -3,9 +3,9 @@ import "./Theme.css";
 
 const Theme = ({ isActive }) => {
   return (
-    <div id="themeMessage" className={isActive ? "active" : ""}>
-      <div id="msgTextMain">DARK THEME</div>
-      <div id="msgText">
+    <div id="theme-message" className={isActive ? "is-active" : ""}>
+      <div id="msg-text-main">DARK THEME</div>
+      <div id="msg-text">
         Click on the <i className="fas fa-moon"></i> to switch.
       </div>
     </div>
