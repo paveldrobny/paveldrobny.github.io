@@ -15,8 +15,8 @@ const SliderPhoto = (props) => {
               right: `${props.current * 100}%`,
             }}
           >
-            <div className="projectInfo">
-              <div className="projectName">
+            <div className="project-info">
+              <div className="project-name">
                 <i>
                   <b>{slider.name}</b>
                 </i>

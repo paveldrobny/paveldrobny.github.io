@@ -10,7 +10,7 @@
 }
 
 #header.is-active{
-  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .header-content {

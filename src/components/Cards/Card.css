@@ -24,26 +24,22 @@ section {
   background-size: contain;
   border-radius: 4px;
   border: var(--border-outline);
-  -webkit-box-shadow: 0 4px 8px rgb(0 0 0 / 14%);
-  box-shadow: 0 4px 8px rgb(0 0 0 / 14%);
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 6px 12px -2px, rgba(0, 0, 0, 0.28) 0px 2px 7px -3px;
+  transition-property: box-shadows;
+  transition: .3s;
   box-sizing: border-box;
-  transition: .3s cubic-bezier(0, 0, 0, 1);
   background-size: contain;
   background: var(--cards-bg);
 }
 
 .card:hover {
-  -webkit-box-shadow: 0 8px 16px rgb(0 0 0 / 14%);
-  box-shadow: 0 8px 16px rgb(0 0 0 / 14%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .card-img-content {
   position: relative;
   width: auto;
   height: calc(100% - 184px);
-  top: 0;
-  left: 0;
-  right: 0;
   overflow: hidden;
 }
 
@@ -106,14 +102,14 @@ section {
   text-align: left;
 }
 
-.card-btn{
+.card-btn {
   display: inline-block;
   position: relative;
   top: 0px;
   color: white;
   padding: 8px 10px;
   margin: 0 5px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 0.9em;
   font-weight: 500;
   letter-spacing: 1px;
@@ -125,19 +121,23 @@ section {
 }
 
 .card-btn.btn-demo:hover {
-  background: rgb(60, 60, 163);
+  background: rgb(25, 70, 168);
 }
 
 .card-btn.btn-code {
-  background: green;
+  background: rgb(32, 156, 32);
 }
 
 .card-btn.btn-code:hover {
-  background: rgb(12, 108, 12);
+  background: rgb(34, 139, 34);
 }
 
 .card-btn.btn-demo.is-active {
   display: inline-block;
+}
+
+.fa-play, .fa-code {
+  padding-right: 5px;
 }
 
 @media screen and (max-width: 555px) {

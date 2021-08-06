@@ -27,11 +27,14 @@ const Card = ({ card }) => {
           <Link
             card={card.urlDemo}
             name="DEMO"
+            FA_icon="play"
             className={`card-btn btn-demo ${card.isDemo ? "is-active" : ""}`}
           />
+          
           <Link
             card={card.urlCode}
             name="SOURCE CODE"
+            FA_icon="code"
             className="card-btn btn-code"
           />
         </div>

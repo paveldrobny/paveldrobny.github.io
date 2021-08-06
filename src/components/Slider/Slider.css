@@ -111,8 +111,7 @@
   height: 690px;
   border-radius: 4px;
   white-space: nowrap;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .slider-image {
@@ -129,42 +128,41 @@
   background-size: cover;
 }
 
-#progress-Wrapper {
+#progress-wrapper {
   overflow: hidden;
   width: calc(100% - 10px);
   margin: -1px 5px;
   margin-bottom: 3px;
 }
 
-.projectInfo {
+.project-info {
   position: absolute;
   right: 8px;
   bottom: 8px;
 }
 
-.projectName {
+.project-name {
   float: left;
   color: rgb(226, 226, 226);
   padding: 7px 12px;
   font-size: 19px;
   overflow: hidden;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border: 1px solid rgb(255, 255, 255, .6);
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.37);
   background: rgb(40, 41, 42);
 }
 
-.projectName i b {
+.project-name i b {
   color: white;
 }
 
-.projectName i {
+.project-name i {
   display: block;
 }
 
 /* DOTS */
 
-#slider-dotsCont {
+#slider-dots-content {
   text-align: center;
   padding-top: 20px;
 }
@@ -193,7 +191,7 @@
   background: rgb(0, 140, 255);
 }
 
-.slider-dots.active::after {
+.slider-dots.is-active::after {
   content: "";
   transform: translate(-50%, -50%) scale(1);
 }

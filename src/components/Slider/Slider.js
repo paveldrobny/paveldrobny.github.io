@@ -83,7 +83,7 @@ const Slider = () => {
         ) : (
           <div>
             <div id="slider-title">Lates updates</div>
-            <div id="progress-Wrapper">
+            <div id="progress-wrapper">
               <ProgressBar value={progress} styleType={"_slider"} />
             </div>
             <SliderPhoto sliders={sliders} current={current} />
