@@ -27,7 +27,7 @@ const Slider = () => {
   const [isLoading, setLoading] = useState(true);
   const db = firebase.firestore();
   const time = 5000;
-  const numberToShow = 2;
+  const numberToShow = 3;
 
   useEffect(() => {
     const slidersData = [];

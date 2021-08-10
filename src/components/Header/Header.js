@@ -9,9 +9,9 @@ const Header = () => {
   const [isDarkTheme, setDarkTheme] = useState(
     localStorage.getItem("isDarkTheme") ? true : false
   );
-  const [isMessageTheme, setMessageTheme] = useState(
-    localStorage.getItem("isMessageTheme") ? false : true
-  );
+  // const [isMessageTheme, setMessageTheme] = useState(
+  //   localStorage.getItem("isMessageTheme") ? false : true
+  // );
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -38,13 +38,13 @@ const Header = () => {
 
   const changeTheme = () => {
     store();
-    setMessageTheme(false);
+    //setMessageTheme(false);
     getValue();
   };
 
   const store = () => {
     localStorage.setItem("isDarkTheme", isDarkTheme);
-    localStorage.setItem("isMessageTheme", isMessageTheme);
+    //localStorage.setItem("isMessageTheme", isMessageTheme);
   };
 
   const getValue = () => {
@@ -63,9 +63,9 @@ const Header = () => {
       htmlClass.remove("dark-theme");
       setDarkTheme(true);
     }
-    if (localStorage.getItem("isMessageTheme") === "false") {
-      setMessageTheme(false);
-    }
+    // if (localStorage.getItem("isMessageTheme") === "false") {
+    //   setMessageTheme(false);
+    // }
   };
 
   return (
@@ -76,12 +76,16 @@ const Header = () => {
         <div className="header-nav-btn">
           <ul>
             <li id="theme-btn" onClick={changeTheme}>
-              <i className="fas fa-moon"></i>
+              {isDarkTheme ? (
+                <i className="fas fa-moon"></i>
+              ) : (
+                <i className="fas fa-sun"></i>
+              )}
             </li>
           </ul>
         </div>
       </div>
-      <ThemeMessage isActive={isMessageTheme}></ThemeMessage>
+      {/* <ThemeMessage isActive={isMessageTheme}></ThemeMessage> */}
     </header>
   );
 };

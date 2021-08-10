@@ -8,7 +8,7 @@ const SliderPhoto = (props) => {
           <div
             key={index}
             className={
-              index === props.current ? "slider-image active" : "slider-image"
+              index === props.current ? "slider-image is-active" : "slider-image"
             }
             style={{
               backgroundImage: `url(${slider.img})`,

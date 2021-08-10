@@ -9,7 +9,7 @@
   background: var(--BG);
 }
 
-#header.is-active{
+#header.is-active {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -39,10 +39,10 @@
   padding: 0 5px;
 }
 
-.fa-moon{
+.fa-moon, .fa-sun {
   font-size: 18px;
 }
 
-.header-content, .fa-moon, .header-nav-btn ul li a {
+.header-content, .fa-moon, .fa-sun, .header-nav-btn ul li a {
   color: var(--color-text);
 }
