@@ -122,10 +122,14 @@
   overflow: hidden;
   right: 0%;
   border: var(--border-outline);
-  transition: .5s;
+  transition: .6s;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.slider-image.is-active{
+ 
 }
 
 #progress-wrapper {
@@ -173,22 +177,30 @@
   display: inline-block;
   width: 14px;
   height: 14px;
+  overflow: hidden;
   border-radius: 50px;
   margin: 0 5px;
+  transition: .6s;
   border: 2px solid rgb(0, 140, 255);
+  background: rgba(129, 129, 129, 0.15);
 }
 
 .slider-dots::after {
   content: "";
   position: absolute;
-  width: 9px;
-  height: 9px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
   top: 50%;
   left: 50%;
-  border-radius: 50%;
-  transition: .3s;
+  transition: .6s;
+  border-radius: 50px;
   transform: translate(-50%, -50%) scale(0);
   background: rgb(0, 140, 255);
+}
+
+.slider-dots.is-active {
+  width: 34px;
+  background: none;
 }
 
 .slider-dots.is-active::after {
