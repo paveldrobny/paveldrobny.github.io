@@ -123,15 +123,15 @@
   right: 0%;
   border: var(--border-outline);
   transition: .6s;
-  transform: scale(0.9);
+  transform: scale(1);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.slider-image.is-active {
+/* .slider-image.is-active {
   transform: scale(1);
-}
+} */
 
 #progress-wrapper {
   overflow: hidden;
