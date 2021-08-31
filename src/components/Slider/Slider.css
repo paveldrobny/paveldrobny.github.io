@@ -118,7 +118,7 @@
   display: inline-block;
   margin: 0;
   width: calc(100% - 2px);
-  height: calc(100% - 2px);
+  height: 100%;
   overflow: hidden;
   right: 0%;
   border: var(--border-outline);
