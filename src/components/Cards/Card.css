@@ -15,9 +15,9 @@ section {
 
 .card {
   position: relative;
-  width: 655px;
-  height: 510px;
-  margin: 15px;
+  width: 450px;
+  height: 390px;
+  margin: 10px;
   overflow: hidden;
   text-align: center;
   text-decoration: none;

@@ -8,9 +8,12 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Slider />
-      <Cards />
-      <Footer />
+
+      <main id="main-content">
+        <Slider />
+        <Cards />
+        <Footer />
+      </main>
     </div>
   );
 };

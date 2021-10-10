@@ -2,15 +2,15 @@
   user-select: none;
   top: 0;
   width: 100%;
-  height: 65px;
+  height: 55px;
   position: sticky;
   z-index: 999;
   transition: box-shadow .15s;
-  background: var(--BG);
+  background: var(--header);
 }
 
 #header.is-active {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 0px 2px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -20,14 +20,14 @@
 }
 
 .header-title, .header-nav-btn {
-  display: inline-block;
-  line-height: 65px;
+  display: inline;
+  line-height: 55px;
 }
 
 .header-title {
   font-size: 28px;
   font-weight: 700;
-  line-height: 61px;
+  line-height: 49px;
 }
 
 .header-nav-btn {
@@ -40,6 +40,9 @@
 }
 
 .fa-moon, .fa-sun {
+  position: absolute;
+  transition: .15s;
+  line-height: 50px;
   font-size: 18px;
 }
 

@@ -5,7 +5,7 @@ import ProgressBar from "../ProgressBar";
 
 const Header = () => {
   const [percentage, setPercentage] = useState(0);
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   const [isDarkTheme, setDarkTheme] = useState(
     localStorage.getItem("isDarkTheme") ? true : false
   );
@@ -18,7 +18,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [active]);
+  }, []);
 
   useEffect(() => {
     getValue();
@@ -33,7 +33,7 @@ const Header = () => {
     let percentValue = (scrollStart / scrollHeight) * 100;
     setPercentage(percentValue);
 
-    window.scrollY >= 15 ? setActive(true) : setActive(false);
+    // window.scrollY >= 15 ? setActive(true) : setActive(false);
   };
 
   const changeTheme = () => {
@@ -76,11 +76,14 @@ const Header = () => {
         <div className="header-nav-btn">
           <ul>
             <li id="theme-btn" onClick={changeTheme}>
-              {isDarkTheme ? (
-                <i className="fas fa-moon"></i>
-              ) : (
-                <i className="fas fa-sun"></i>
-              )}
+              <i
+                className="fas fa-moon"
+                style={{ right: !isDarkTheme ? "-35px" : "17px" }}
+              ></i>
+              <i
+                className="fas fa-sun"
+                style={{ right: isDarkTheme ? "-35px" : "17px" }}
+              ></i>
             </li>
           </ul>
         </div>
