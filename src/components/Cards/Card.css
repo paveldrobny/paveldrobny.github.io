@@ -15,8 +15,8 @@ section {
 
 .card {
   position: relative;
-  width: 450px;
-  height: 390px;
+  width: 385px;
+  height: 410px;
   margin: 10px;
   overflow: hidden;
   text-align: center;
@@ -99,7 +99,6 @@ section {
 .card-view {
   position: relative;
   top: 8px;
-  left: 5px;
   height: 55px;
   text-align: left;
 }
@@ -110,16 +109,21 @@ section {
   top: 0px;
   color: white;
   padding: 8px 10px;
-  margin: 0 5px;
+  margin: 0 11px;
   border-radius: 2px;
   font-size: 0.9em;
   font-weight: 500;
   letter-spacing: 1px;
 }
 
+.card-btn-text {
+  display: inline-block;
+  padding-right: 5px;
+}
+
 .card-btn.btn-demo {
   display: none;
-  background: rgb(0, 81, 255);
+  background: var(--demo-btn);
 }
 
 .card-btn.btn-demo:hover {
@@ -127,7 +131,7 @@ section {
 }
 
 .card-btn.btn-code {
-  background: rgb(31, 165, 31);
+  background: var(--code-btn);
 }
 
 .card-btn.btn-code:hover {
@@ -142,14 +146,17 @@ section {
   padding-left: 5px;
 }
 
-@media screen and (max-width: 555px) {
-  .card {
-    height: 460px;
-  }
-}
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 550px) {
   .card {
-    height: 360px;
+    height: 350px;
+  }
+
+  .card-btn {
+    width: auto;
+  }
+
+  .card-btn-text {
+    display: none;
   }
 }

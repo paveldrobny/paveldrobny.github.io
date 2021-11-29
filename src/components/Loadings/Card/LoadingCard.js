@@ -6,6 +6,10 @@ const LoadingCard = () => {
     <>
       <div className="load-card"></div>
       <div className="load-card"></div>
+      <div className="load-card"></div>
+      <div className="load-card"></div>
+      <div className="load-card"></div>
+      <div className="load-card"></div>
     </>
   );
 };

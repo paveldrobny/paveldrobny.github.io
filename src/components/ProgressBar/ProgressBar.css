@@ -14,7 +14,7 @@
   background: rgb(2, 141, 255);
 }
 
-.progress-value._slider {
+.progress-value._carousel {
   height: 5px;
   border-radius: 1px;
   background: rgba(34, 149, 78, 0.7);

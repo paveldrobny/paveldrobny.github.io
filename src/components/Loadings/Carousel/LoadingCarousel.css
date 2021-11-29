@@ -1,18 +1,18 @@
-.LoadSliderMain {
+.LoadCarouselMain {
     margin-top: -13px;
     overflow: hidden;
     width: calc(100% - 10px);
 }
 
-.LoadSlider {
+.LoadCarousel {
     background: rgba(160, 160, 160, 0.26);
 }
 
-.LoadSliderText {
+.LoadCarouselText {
     position: relative;
 }
 
-.LoadSliderText::after {
+.LoadCarouselText::after {
     display: block;
     content: "";
     width: 190px;
