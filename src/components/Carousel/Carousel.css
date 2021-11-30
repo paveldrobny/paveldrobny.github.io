@@ -35,12 +35,12 @@
 
 .carousel-btn button {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
   opacity: 1;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, .65);
 }
 
 .carousel-btn button:hover {
@@ -48,9 +48,10 @@
 }
 
 .fa-chevron-left, .fa-chevron-right {
-  border-radius: 50%;
-  font-size: 29px;
+  top: 1px;
+  font-size: 23px;
   color: white;
+  text-shadow: 0 0 10px black;
 }
 
 .fa-chevron-left {
@@ -75,19 +76,6 @@
   float: right;
 }
 
-#silder-btn-left::after, #silder-btn-right::after {
-  top: -30px;
-  max-width: 333px;
-  height: auto;
-  line-height: 19px;
-  opacity: 0;
-  white-space: nowrap;
-  padding: 1px 5px;
-  border-radius: 1px;
-  color: var(--color-text);
-  pointer-events: none;
-  background: var(--BG);
-}
 
 #silder-btn-left:hover::after, #silder-btn-right:hover::after {
   opacity: 1;
@@ -182,22 +170,11 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-  width: 55px;
-  height: 6px;
-  border-radius: 1px;
-  margin: 0 6px;
-  border-top: 0px solid rgba(0, 140, 255, 0);
-  background: rgba(0, 140, 255, 0);
-}
-
-.carousel-dots::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px;
+  width: 75px;
+  height: 5px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 8px;
   background: rgba(114, 114, 114, 0.5);
 }
 
@@ -206,10 +183,6 @@
   background: rgba(0, 140, 255, 1);
 }
 
-.carousel-dots.is-active::after {
-  content: "";
-  background: rgba(0, 140, 255, 1);
-}
 
 /* MEDIA */
 

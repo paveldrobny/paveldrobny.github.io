@@ -77,12 +77,7 @@ const Header = () => {
           <ul>
             <li id="theme-btn" onClick={changeTheme}>
               <i
-                className="fas fa-moon"
-                style={{ right: !isDarkTheme ? "-35px" : "17px" }}
-              ></i>
-              <i
-                className="fas fa-sun"
-                style={{ right: isDarkTheme ? "-35px" : "17px" }}
+                className={`${isDarkTheme ? "fas fa-moon" : "fas fa-sun"} `}
               ></i>
             </li>
           </ul>
