@@ -19,7 +19,11 @@ const CarouselPhoto = (props) => {
             }}
           >
             <New card={carousel}/>
-            <div className="project-info">
+            <div className={
+              index === props.current
+                ? "project-info is-active"
+                : "project-info"
+            }>
               <div className="project-name">
                 <i>
                   <b>{carousel.name}</b>

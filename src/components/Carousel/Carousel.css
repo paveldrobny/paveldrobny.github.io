@@ -137,8 +137,15 @@
 
 .project-info {
   position: absolute;
-  right: 8px;
+  right: -15%;
   bottom: 8px;
+  opacity: 0;
+  transition: .9s;
+}
+
+.project-info.is-active {
+  right: 8px;
+  opacity: 1;
 }
 
 .project-name {
@@ -147,8 +154,9 @@
   padding: 7px 12px;
   font-size: 19px;
   overflow: hidden;
+  border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgb(21, 22, 22);
+  background: #292626;
 }
 
 .project-name i b {

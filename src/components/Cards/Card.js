@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Info from "./Info";
 import Link from "./Link";
 import Title from "./Title";
 import New from "./New";
 
 const Card = ({ card }) => {
-  const [cardInfo, setCardInfo] = useState([
+  const [cardInfo, setCardInfo] = React.useState([
     { name: "Using", property: card.using },
     { name: "Language", property: card.language },
     { name: "Update", property: card.update },
@@ -13,7 +13,7 @@ const Card = ({ card }) => {
 
   return (
     <div className="card">
-      <New card={card}/>
+      <New card={card} />
       <div className="card-img-content">
         <div
           className="card-img"
@@ -32,7 +32,7 @@ const Card = ({ card }) => {
             FA_icon="play"
             className={`card-btn btn-demo ${card.isDemo ? "is-active" : ""}`}
           />
-          
+
           <Link
             card={card.urlCode}
             name="SOURCE CODE"
