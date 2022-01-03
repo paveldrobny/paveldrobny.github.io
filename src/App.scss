@@ -1,0 +1,76 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+    margin: 0;
+    background: var(--BG);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid var(--BG);
+    border-radius: 10px;
+    background: rgba(73, 73, 73, 0.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+button,
+li,
+ul {
+    outline: none;
+    border-style: none;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    --BG: rgb(247, 247, 248);
+    --header: rgb(255, 255, 255);
+    --max-width: 1250px;
+    --border-outline: 1px solid rgba(131, 130, 130, 0.1);
+    --cards-bg: #fff;
+    --color-text: black;
+    --demo-btn: rgb(0, 81, 255);
+    --code-btn: rgb(31, 165, 31);
+    --footer-bg: rgb(246, 246, 246);
+    --footer-text: rgb(61, 61, 61);
+    --footer-link: black;
+}
+
+[class="dark-theme"] {
+    --BG: rgb(14, 14, 16);
+    --header: #18181b;
+    --cards-bg: #111111;
+    --demo-btn: rgb(29, 62, 134);
+    --code-btn: rgb(31, 100, 31);
+    --color-text: rgb(230, 230, 230);
+    --footer-bg: rgb(15, 15, 15);
+    --footer-text: rgb(161, 161, 161);
+    --footer-link: white;
+}
+
+#main-content {
+    overflow-y: scroll;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 55px);
+    scrollbar-color: rgb(126, 126, 126) rgba(255, 255, 255, 0);
+    scrollbar-width: thin !important;
+}

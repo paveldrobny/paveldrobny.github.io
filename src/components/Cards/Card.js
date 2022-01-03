@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Info from "./Info";
 import Link from "./Link";
 import Title from "./Title";
+import New from "./New";
 
 const Card = ({ card }) => {
   const [cardInfo, setCardInfo] = useState([
@@ -12,6 +13,7 @@ const Card = ({ card }) => {
 
   return (
     <div className="card">
+      <New card={card}/>
       <div className="card-img-content">
         <div
           className="card-img"

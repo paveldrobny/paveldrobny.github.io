@@ -1,4 +1,5 @@
 import React from "react";
+import New from "../Cards/New";
 
 const CarouselPhoto = (props) => {
   return (
@@ -17,6 +18,7 @@ const CarouselPhoto = (props) => {
               right: `${props.current * 100}%`,
             }}
           >
+            <New card={carousel}/>
             <div className="project-info">
               <div className="project-name">
                 <i>
