@@ -216,4 +216,8 @@
   #carousel-image-content {
     height: 230px;
   }
+
+  .project-name {
+    font-size: 12px;
+  }
 }

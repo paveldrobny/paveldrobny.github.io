@@ -38,7 +38,7 @@ section {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.card-new{
+.card-new {
   z-index: 99;
   position: absolute;
   top: 0;
@@ -171,6 +171,10 @@ section {
   .card-btn-text {
     display: none;
   }
+
+  .fa-play, .fa-code {
+    padding-left: 0px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -200,5 +204,9 @@ section {
 
   .card-btn-text {
     display: none;
+  }
+
+  .fa-play, .fa-code {
+    padding-left: 0px;
   }
 }
