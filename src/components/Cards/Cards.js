@@ -41,7 +41,6 @@ const Cards = () => {
 
   return (
     <div className="projects">
-      <section>
         {isLoading ? (
           <LoadingCard />
         ) : (
@@ -49,7 +48,6 @@ const Cards = () => {
             return <Card card={card} key={index}></Card>;
           })
         )}
-      </section>
     </div>
   );
 };

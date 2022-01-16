@@ -6,9 +6,9 @@ const Info = ({ cardInfo }) => {
       {cardInfo.map((info, index) => {
         return (
           <div key={index} className="card-info">
-            <b>
+            <div className="card-text">
               {info.name}: {info.property}
-            </b>
+            </div>
           </div>
         );
       })}

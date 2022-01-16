@@ -43,7 +43,7 @@ button {
 :root {
     --BG: rgb(247, 247, 248);
     --header: rgb(255, 255, 255);
-    --max-width: 1250px;
+    --max-width: 1260px;
     --border-outline: 1px solid rgba(131, 130, 130, 0.1);
     --cards-bg: #fff;
     --color-text: black;
@@ -57,7 +57,7 @@ button {
 [class="dark-theme"] {
     --BG: rgb(14, 14, 16);
     --header: #18181b;
-    --cards-bg: #111111;
+    --cards-bg: #161616;
     --demo-btn: rgb(29, 62, 134);
     --code-btn: rgb(31, 100, 31);
     --color-text: rgb(230, 230, 230);
