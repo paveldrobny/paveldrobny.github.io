@@ -9,6 +9,7 @@
 }
 
 .card {
+  display: none;
   position: relative;
   width: 390px;
   height: 410px;
@@ -30,6 +31,10 @@
 .card:hover {
   -webkit-box-shadow: 0 5px 10px 0 rgb(0 0 0 / 26%);
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 26%);
+}
+
+.card.is-show{
+  display: block;
 }
 
 .card-new {

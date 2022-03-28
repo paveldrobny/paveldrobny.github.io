@@ -12,7 +12,7 @@ const Card = ({ card }) => {
   ]);
 
   return (
-    <div className="card">
+    <div className={`card ${card.isShow ? "is-show" : ""}`}>
       <New card={card} />
       <div className="card-img-content">
         <div
