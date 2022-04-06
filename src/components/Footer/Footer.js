@@ -5,7 +5,7 @@ const Footer = () => {
   const urlUpdate =
     "https://api.github.com/repos/paveldrobny/paveldrobny.github.io/branches/gh-pages";
 
-  const [update, setUpdate] = useState("0000/00/00");
+  const [update, setUpdate] = useState("2022/04/06");
   const [links, setLinks] = useState([
     { href: "https://vk.com/pdrobny", class: "fab fa-vk" },
     { href: "https://github.com/paveldrobny", class: "fab fa-github" },
@@ -13,15 +13,15 @@ const Footer = () => {
 
   useEffect(() => {
     let result = "";
-    return fetch(urlUpdate)
-      .then((res) => res.json())
-      .then((out) => {
-        result = out.commit.commit.author.date.slice(0, 10);
-        setUpdate(result);
-      })
-      .catch((err) => {
-        return err;
-      });
+    // return fetch(urlUpdate)
+    //   .then((res) => res.json())
+    //   .then((out) => {
+    //     result = out.commit.commit.author.date.slice(0, 10);
+    //     setUpdate(result);
+    //   })
+    //   .catch((err) => {
+    //     return err;
+    //   });
   });
 
   return (

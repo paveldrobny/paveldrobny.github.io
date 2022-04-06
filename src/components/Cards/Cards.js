@@ -3,6 +3,7 @@ import firebase from "firebase";
 import Card from "./Card";
 import LoadingCard from "../Loadings/Card";
 import "./Card.css";
+import data from "../../cardsData"
 
 const Cards = () => {
   const [cards, setCards] = useState([]);
@@ -12,17 +13,17 @@ const Cards = () => {
   useEffect(() => {
     const cardsData = [];
 
-    db.collection("Projects")
-      .orderBy("id", "desc")
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          cardsData.push(doc.data());
-          updateProjectData(doc.data().repoName, doc.id);
-        });
-        setCards(cardsData);
-        setLoading(false);
-      });
+    // db.collection("Projects")
+    //   .orderBy("id", "desc")
+    //   .get()
+    //   .then((querySnapshot) => {
+    //     querySnapshot.forEach((doc) => {
+    //       cardsData.push(doc.data());
+    //       updateProjectData(doc.data().repoName, doc.id);
+    //     });
+         setCards(data);
+         setLoading(false);
+    //   });
   }, []);
 
   const updateProjectData = (repo, index) => {

@@ -6,6 +6,7 @@ import CarouselPhoto from "./CarouselPhoto";
 import LoadingCarousel from "../Loadings/Carousel";
 import CarouselDots from "./CarouselDots";
 import ProgressBar from "../ProgressBar";
+import data from "../../cardsData"
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
@@ -13,13 +14,13 @@ const Carousel = () => {
     {
       id: "silder-btn-left",
       class: "fas fa-chevron-left",
-      isLeft: true,
+      isLeft: true
     },
     {
       id: "silder-btn-right",
       class: "fas fa-chevron-right",
-      isLeft: false,
-    },
+      isLeft: false
+    }
   ]);
   const [carousels, setCarousels] = useState([]);
   const [isCarouselMove, setCarouselMove] = useState(true);
@@ -32,16 +33,19 @@ const Carousel = () => {
   useEffect(() => {
     const carouselsData = [];
 
-    db.collection("Projects")
-      .orderBy("update", "desc")
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          carouselsData.push(doc.data());
-        });
-        setCarousels(carouselsData.slice(0, numberToShow));
-        setLoading(false);
-      });
+    // db.collection("Projects")
+    //   .orderBy("update", "desc")
+    //   .get()
+    //   .then((querySnapshot) => {
+    //     querySnapshot.forEach((doc) => {
+    //       carouselsData.push(doc.data());
+    //     });
+    //     setCarousels(carouselsData.slice(0, numberToShow));
+    //     setLoading(false);
+    //   });
+    
+    setCarousels(data.slice(0, numberToShow));
+    setLoading(false);
   }, []);
 
   useEffect(() => {
