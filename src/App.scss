@@ -41,15 +41,16 @@ button {
 }
 
 :root {
-    --BG: rgb(247, 247, 248);
+    --BG: rgb(255, 255, 255);
     --header: rgb(255, 255, 255);
     --max-width: 1260px;
-    --border-outline: 1px solid rgba(131, 130, 130, 0.1);
-    --cards-bg: #fff;
+    --border-outline: 1px solid rgba(131, 130, 130, 1);
+    --border: 1px solid rgb(229, 229, 229);
+    --cards-bg: rgb(255, 255, 255);
     --color-text: black;
     --demo-btn: rgb(0, 81, 255);
     --code-btn: rgb(31, 165, 31);
-    --footer-bg: rgb(246, 246, 246);
+    --footer-bg: rgb(241, 245, 249);
     --footer-text: rgb(61, 61, 61);
     --footer-link: black;
 }
@@ -58,6 +59,7 @@ button {
     --BG: rgb(14, 14, 16);
     --header: #18181b;
     --cards-bg: #161616;
+    --border: 1px solid rgb(36, 36, 36);
     --demo-btn: rgb(29, 62, 134);
     --code-btn: rgb(31, 100, 31);
     --color-text: rgb(230, 230, 230);

@@ -69,7 +69,7 @@ const Header = () => {
   };
 
   return (
-    <header id="header" className={`${active ? "is-active" : ""}`}>
+    <header id="header" className="is-active">
       {/* <ProgressBar value={percentage} styleType={"_header"} /> */}
       <div className="header-content">
         <div className="header-title">Pavel Drobny</div>
