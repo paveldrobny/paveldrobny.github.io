@@ -16,7 +16,7 @@ const data = [
   },
   {
     id: 3,
-    img: "https://raw.githubusercontent.com/paveldrobny/paveldrobny.github.io/master/src/images/UnityQuestSystem.png",
+    img: Image.unityQuestSystem,
     name: "Unity Quest System",
     using: "Unity 2020",
     language: "C#",
@@ -27,7 +27,7 @@ const data = [
   },
   {
     id: 2,
-    img: "https://raw.githubusercontent.com/paveldrobny/paveldrobny.github.io/master/src/images/HUD_Information.png",
+    img: Image.hudInformation,
     name: "HUD information",
     using: "Unreal Engine 4.26",
     language: "C++, Blueprints",

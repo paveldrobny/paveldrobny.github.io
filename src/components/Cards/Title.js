@@ -1,11 +1,7 @@
 import React from "react";
 
 const Title = ({ card }) => {
-  return (
-    <div className="card-title">
-      <i>{card.name}</i>
-    </div>
-  );
+  return <div className="card-title">{card.name}</div>;
 };
 
 export default Title;
