@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4455ae3a.chunk.css",
-    "main.js": "/static/js/main.213e0b9f.chunk.js",
-    "main.js.map": "/static/js/main.213e0b9f.chunk.js.map",
+    "main.js": "/static/js/main.49626935.chunk.js",
+    "main.js.map": "/static/js/main.49626935.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3826bc61.js",
     "runtime-main.js.map": "/static/js/runtime-main.3826bc61.js.map",
     "static/js/2.6f251511.chunk.js": "/static/js/2.6f251511.chunk.js",
@@ -15,12 +15,12 @@
     "static/media/HUD_Information.8e5029fe.png": "/static/media/HUD_Information.8e5029fe.png",
     "static/media/PingPongJS.2feeb60e.png": "/static/media/PingPongJS.2feeb60e.png",
     "static/media/PlatformerJS.72c4ea9b.png": "/static/media/PlatformerJS.72c4ea9b.png",
-    "static/media/UnityQuestSystem.a3582aa6.png": "/static/media/UnityQuestSystem.a3582aa6.png"
+    "static/media/UnityQuestSystem.fbe62030.png": "/static/media/UnityQuestSystem.fbe62030.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3826bc61.js",
     "static/js/2.6f251511.chunk.js",
     "static/css/main.4455ae3a.chunk.css",
-    "static/js/main.213e0b9f.chunk.js"
+    "static/js/main.49626935.chunk.js"
   ]
 }
