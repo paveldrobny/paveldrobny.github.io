@@ -10,7 +10,7 @@ footer {
   text-align: center;
   height: 100%;
   border-top: 1px solid rgba(146, 146, 146, 0.15);
-  background: var(--footer-bg);
+  background: var(--BG);
 }
 
 #footer-update-text {

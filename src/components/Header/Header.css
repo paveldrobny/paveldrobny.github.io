@@ -5,8 +5,9 @@
   height: 55px;
   position: sticky;
   z-index: 999;
-  transition: box-shadow .15s;
-  background: var(--header);
+  box-shadow: rgba(9, 30, 66, 0.1) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.05) 0px 0px 0px 1px;
+  background-color: var(--cards-bg);
 }
 
 #header.is-active {
@@ -19,7 +20,8 @@
   height: 100%;
 }
 
-.header-title, .header-nav-btn {
+.header-title,
+.header-nav-btn {
   display: inline;
   line-height: 55px;
 }
@@ -42,13 +44,17 @@
   padding: 0 5px;
 }
 
-.fa-moon, .fa-sun {
+.fa-moon,
+.fa-sun {
   position: relative;
-  transition: .15s;
+  transition: 0.15s;
   line-height: 50px;
   font-size: 18px;
 }
 
-.header-content, .fa-moon, .fa-sun, .header-nav-btn ul li a {
+.header-content,
+.fa-moon,
+.fa-sun,
+.header-nav-btn ul li a {
   color: var(--color-text);
 }

@@ -67,7 +67,7 @@
   height: 40px;
   border-radius: 50%;
   box-shadow: 0 0 8px 4px rgb(0, 0, 0, 0.2);
-  background: var(--BG);
+  background: var(--cards-bg);
 }
 
 .fa-chevron-left,
@@ -124,7 +124,7 @@
   overflow: hidden;
   top: 0;
   height: 635px;
-  border-radius: 2px;
+  border-radius: 8px;
   white-space: nowrap;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -141,7 +141,6 @@
   overflow: hidden;
   opacity: 0.8;
   right: 0;
-
   transition: 0.5s;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -182,7 +181,7 @@
   padding: 7px 12px;
   font-size: 19px;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 8px;
   border: 1px solid rgba(130, 130, 130, 0.9);
   box-shadow: 0 0 8px 2px rgb(0, 0, 0);
   background: rgba(37, 34, 34);
@@ -208,15 +207,14 @@
   cursor: pointer;
   display: inline-block;
   width: 75px;
-  height: 6px;
+  height: 8px;
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   margin: 0 8px;
   background: rgba(114, 114, 114, 0.5);
 }
 
 .carousel-dots.is-active {
-  border-radius: 2px;
   background: rgba(0, 140, 255, 1);
 }
 

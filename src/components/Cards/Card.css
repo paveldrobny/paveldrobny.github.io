@@ -18,14 +18,12 @@
   text-align: center;
   text-decoration: none;
   background-size: contain;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
-  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition-property: box-shadows;
-  transition: .3s;
+  transition: 0.3s;
   box-sizing: border-box;
   background-size: contain;
-  border: var(--border);
   background: var(--cards-bg);
 }
 
@@ -34,7 +32,7 @@
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 26%);
 }
 
-.card.is-show{
+.card.is-show {
   display: block;
 }
 
@@ -74,7 +72,7 @@
   transition: all 0.3s ease-out;
 }
 
-.card-text{
+.card-text {
   font-weight: 600;
 }
 
@@ -90,7 +88,8 @@
   background: transparent;
 }
 
-.card-title, .card-info {
+.card-title,
+.card-info {
   text-align: left;
   overflow: hidden;
   color: var(--color-text);
@@ -129,7 +128,7 @@
   color: white;
   padding: 8px 10px;
   margin: 0 11px;
-  border-radius: 2px;
+  border-radius: 8px;
   font-size: 0.9em;
   font-weight: 500;
   letter-spacing: 1px;
@@ -161,7 +160,8 @@
   display: inline-block;
 }
 
-.fa-play, .fa-code {
+.fa-play,
+.fa-code {
   padding-left: 5px;
 }
 
@@ -175,7 +175,8 @@
     display: none;
   }
 
-  .fa-play, .fa-code {
+  .fa-play,
+  .fa-code {
     padding-left: 0px;
   }
 }
@@ -209,7 +210,8 @@
     display: none;
   }
 
-  .fa-play, .fa-code {
+  .fa-play,
+  .fa-code {
     padding-left: 0px;
   }
 }

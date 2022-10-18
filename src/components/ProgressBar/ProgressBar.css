@@ -16,6 +16,6 @@
 
 .progress-value._carousel {
   height: 5px;
-  border-radius: 1px;
+  border-radius: 8px;
   background: rgba(34, 149, 78, 0.7);
 }
