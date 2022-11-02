@@ -13,12 +13,12 @@ const Header = () => {
   //   localStorage.getItem("isMessageTheme") ? false : true
   // );
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   useEffect(() => {
     getValue();
@@ -75,6 +75,7 @@ const Header = () => {
         <div className="header-title">Pavel Drobny</div>
         <div className="header-nav-btn">
           <ul>
+            
             <li id="theme-btn" onClick={changeTheme}>
               <i
                 className={`${isDarkTheme ? "fas fa-moon" : "fas fa-sun"} `}

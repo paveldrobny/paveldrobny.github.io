@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-import firebase from "firebase";
+// import firebase from "firebase";
 import CarouselButton from "./CarouselButton";
 import CarouselPhoto from "./CarouselPhoto";
 import LoadingCarousel from "../Loadings/Carousel";
 import CarouselDots from "./CarouselDots";
 import ProgressBar from "../ProgressBar";
-import data from "../../cardsData"
+import data from "../../cardsData";
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
@@ -14,19 +14,19 @@ const Carousel = () => {
     {
       id: "silder-btn-left",
       class: "fas fa-chevron-left",
-      isLeft: true
+      isLeft: true,
     },
     {
       id: "silder-btn-right",
       class: "fas fa-chevron-right",
-      isLeft: false
-    }
+      isLeft: false,
+    },
   ]);
   const [carousels, setCarousels] = useState([]);
   const [isCarouselMove, setCarouselMove] = useState(true);
-  const [progress, setProgress] = useState(1);
+  const [progress, setProgress] = useState(0);
   const [isLoading, setLoading] = useState(true);
-  const db = firebase.firestore();
+  // const db = firebase.firestore();
   const time = 5000;
   const numberToShow = 3;
 
@@ -43,7 +43,7 @@ const Carousel = () => {
     //     setCarousels(carouselsData.slice(0, numberToShow));
     //     setLoading(false);
     //   });
-    
+
     setCarousels(data.slice(0, numberToShow));
     setLoading(false);
   }, []);
@@ -56,10 +56,7 @@ const Carousel = () => {
   }, [current, carousels.length]);
 
   useEffect(() => {
-    const id = setTimeout(
-      () => setProgress(progress + 1),
-      time / 100 - time / 1000
-    );
+    const id = setTimeout(() => setProgress(progress + 1), time / 100 - 8);
     return () => clearTimeout(id);
   }, [progress]);
 

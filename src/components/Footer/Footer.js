@@ -5,7 +5,7 @@ const Footer = () => {
   const urlUpdate =
     "https://api.github.com/repos/paveldrobny/paveldrobny.github.io/branches/gh-pages";
 
-  const [update, setUpdate] = useState("2022/09/06");
+  const [update, setUpdate] = useState("2022/11/3");
   const [links, setLinks] = useState([
     { href: "https://vk.com/pdrobny", class: "fab fa-vk" },
     { href: "https://github.com/paveldrobny", class: "fab fa-github" },
