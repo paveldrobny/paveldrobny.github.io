@@ -6,11 +6,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-    border: 2px solid var(--BG);
+    border: 4px solid var(--BG);
+    
     border-radius: 10px;
     background: rgba(73, 73, 73, 0.7);
 }
@@ -56,9 +57,9 @@ button {
 }   
 
 [class="dark-theme"] {
-    --BG: #18191a;
-    --header: #18181b;
-    --cards-bg: #242526;
+    --BG: rgb(15,15,15);
+    --header: rgb(31, 30, 30);
+    --cards-bg: #1b1b1b;
     --border: 1px solid rgb(36, 36, 36);
     --demo-btn: rgb(29, 62, 134);
     --code-btn: rgb(31, 100, 31);
