@@ -1,14 +1,14 @@
 #footer-wrapper {
   position: relative;
   width: 100%;
-  margin-top: 70px;
-  height: 200px;
+  margin-top: 35px;
+  padding: 20px 0 41px;
 }
 
 footer {
   position: relative;
   text-align: center;
-  height: 100%;
+
   border-top: 1px solid rgba(146, 146, 146, 0.15);
   background: var(--BG);
 }
@@ -17,8 +17,7 @@ footer {
   position: relative;
   font-weight: bold;
   color: var(--footer-text);
-  height: 100px;
-  line-height: 100px;
+  padding: 30px 0;
 }
 
 #footer-link {

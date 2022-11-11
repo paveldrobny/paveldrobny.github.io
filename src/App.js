@@ -22,7 +22,7 @@ const App = () => {
           <div id="about-cards-content">
             {cards.map((card) => {
               return (
-                <div className="about-cards">
+                <div key={card.title} className="about-cards">
                   <div className="about-cards-title">{card.title}</div>
                   <div className="about-cards-desc">{card.desc}</div>
                 </div>
