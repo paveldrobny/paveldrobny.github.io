@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+     <Header/>
       <main id="main-content">
         <Carousel />
         <Cards />

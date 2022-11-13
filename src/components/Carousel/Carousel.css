@@ -1,6 +1,7 @@
 .carousel-content {
   max-width: var(--max-width);
-  margin: 20px auto 20px auto;
+  padding: 20px 0 20px;
+  margin: 0 auto;
 }
 
 .carousel-content,
@@ -110,8 +111,8 @@
 
 #carousel-title {
   position: relative;
-  margin: 10px;
   width: calc(100% - 20px);
+  margin: 0 10px 0;
   padding-bottom: 6px;
   margin-bottom: 10px;
   font-size: 20px;
