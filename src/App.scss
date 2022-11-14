@@ -59,7 +59,7 @@ button {
   --demo-btn: rgb(0, 81, 255);
   --code-btn: rgb(31, 165, 31);
   --footer-bg: rgb(255, 255, 255);
-  --footer-text: rgb(12, 243, 62);
+  --footer-text: rgb(61, 61, 61);
   --footer-link: black;
 }
 
@@ -81,7 +81,7 @@ button {
   position: absolute;
   top: 55px;
   width: 100%;
-  height: calc(100vh - 55px);
+  height: calc(100% - 55px);
   scrollbar-color: rgb(126, 126, 126) rgba(255, 255, 255, 0);
   scrollbar-width: thin !important;
 }
@@ -92,7 +92,7 @@ button {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding-top: 55px;
+  padding: 55px 0 30px;
   max-width: var(--max-width);
 }
 
