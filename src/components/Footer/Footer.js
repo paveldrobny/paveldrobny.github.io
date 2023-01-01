@@ -5,7 +5,7 @@ const Footer = () => {
   const urlUpdate =
     "https://api.github.com/repos/paveldrobny/paveldrobny.github.io/branches/gh-pages";
 
-  const [update, setUpdate] = useState("31.12.2022");
+  const [update, setUpdate] = useState("01.01.2023");
   const [links, setLinks] = useState([
     { href: "https://vk.com/pdrobny", class: "fab fa-vk" },
     { href: "https://github.com/paveldrobny", class: "fab fa-github" },
@@ -31,9 +31,11 @@ const Footer = () => {
         <div>
           {links.map((link, index) => {
             return (
-              <a key={index} id="footer-link" href={link.href}>
-                <i className={link.class}></i>
-              </a>
+              <div key={index} className="footer-link">
+                <a href={link.href}>
+                  <i className={link.class}></i>
+                </a>
+              </div>
             );
           })}
         </div>

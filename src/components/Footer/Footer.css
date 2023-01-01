@@ -1,28 +1,28 @@
 #footer-wrapper {
   position: relative;
   width: 100%;
-  padding: 20px 0 41px;
+  /* padding: 20px 0 41px; */
 }
 
 footer {
   position: relative;
   text-align: center;
-
   border-top: 1px solid rgba(146, 146, 146, 0.15);
-  background: var(--BG);
+  background: var(--cards-bg)
 }
 
 #footer-update-text {
   position: relative;
   font-weight: bold;
   color: var(--footer-text);
-  padding: 30px 0;
+  padding: 30px 0 5px;
 }
 
-#footer-link {
+.footer-link {
   position: relative;
+  display: inline-block;
   padding: 10px;
-  margin: 0 15px;
+  margin: 20px 10px;
   transition: 0.1s;
   font-weight: 100;
   color: var(--color-text);
@@ -30,12 +30,19 @@ footer {
   border-radius: 4px;
   letter-spacing: 3px;
   font-size: 23px;
-  transform: rotate(45deg);
 }
 
-#footer-link:hover {
+.footer-link:hover {
   color: var(--footer-bg);
   background: var(--color-text);
+}
+
+.footer-link a {
+    color: var(--color-text);
+}
+
+.footer-link:hover a {
+    color: var(--footer-bg);
 }
 
 .fa-github, .fa-vk {
