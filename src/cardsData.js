@@ -2,7 +2,21 @@ import Image from "./images/Image";
 
 const data = [
   {
-    id: 2,
+    id: 5,
+    img: Image.spaceShooterJS,
+    name: "Space shooter on JS",
+    using: "Canvas",
+    language: "JavaScript",
+    repoName: "JS-Game_SpaceShooter",
+    update: "04.02.2023",
+    urlDemo: "https://paveldrobny.github.io/JS-Game_SpaceShooter/",
+    urlCode: "https://github.com/paveldrobny/JS-Game_SpaceShooter",
+    isShow: true,
+    isDemo: true,
+    publishData: 1675544213316
+  },
+  {
+    id: 4,
     img: Image.unityQuestSystem,
     name: "Unity Quest System v2.1",
     using: "Unity 2022",
@@ -23,7 +37,7 @@ const data = [
     urlDemo: "https://paveldrobny.github.io/PlatformerJS/",
     urlCode: "https://github.com/paveldrobny/PlatformerJS",
     isShow: true,
-    isDemo: true
+    isDemo: true,
   },
   {
     id: 2,
@@ -47,8 +61,8 @@ const data = [
     urlDemo: "https://paveldrobny.github.io/JS-Game_PingPong/",
     urlCode: "https://github.com/paveldrobny/JS-Game_PingPong",
     isShow: true,
-    isDemo: true
-  }
+    isDemo: true,
+  },
 ];
 
 export default data;

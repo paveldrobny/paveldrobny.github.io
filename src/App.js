@@ -8,7 +8,7 @@ import aboutData from "./aboutData";
 
 const App = () => {
   const [cards, setCards] = useState(aboutData);
-
+  
   return (
     <div className="App">
      <Header/>
