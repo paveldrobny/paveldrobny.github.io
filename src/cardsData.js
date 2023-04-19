@@ -4,11 +4,11 @@ const data = [
   {
     id: 5,
     img: Image.spaceShooterJS,
-    name: "Space shooter on JS",
+    name: "Space shooter on JS v1.1",
     using: "Canvas",
     language: "JavaScript",
     repoName: "JS-Game_SpaceShooter",
-    update: "04.02.2023",
+    update: "19.04.2023",
     urlDemo: "https://paveldrobny.github.io/JS-Game_SpaceShooter/",
     urlCode: "https://github.com/paveldrobny/JS-Game_SpaceShooter",
     isShow: true,
