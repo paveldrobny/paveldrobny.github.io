@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.f2ca8783.chunk.css",
-    "main.js": "/static/js/main.c56b38e7.chunk.js",
-    "main.js.map": "/static/js/main.c56b38e7.chunk.js.map",
+    "main.js": "/static/js/main.67215c50.chunk.js",
+    "main.js.map": "/static/js/main.67215c50.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8bf5d48b.js",
     "runtime-main.js.map": "/static/js/runtime-main.8bf5d48b.js.map",
     "static/js/2.a9b50e3f.chunk.js": "/static/js/2.a9b50e3f.chunk.js",
@@ -15,13 +15,13 @@
     "static/media/HUD_Information.8e5029fe.png": "/static/media/HUD_Information.8e5029fe.png",
     "static/media/PingPongJS.2feeb60e.png": "/static/media/PingPongJS.2feeb60e.png",
     "static/media/PlatformerJS.72c4ea9b.png": "/static/media/PlatformerJS.72c4ea9b.png",
-    "static/media/SpaceShooter.0acbd54e.png": "/static/media/SpaceShooter.0acbd54e.png",
+    "static/media/SpaceShooter.4573ce09.png": "/static/media/SpaceShooter.4573ce09.png",
     "static/media/UnityQuestSystem.fbe62030.png": "/static/media/UnityQuestSystem.fbe62030.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8bf5d48b.js",
     "static/js/2.a9b50e3f.chunk.js",
     "static/css/main.f2ca8783.chunk.css",
-    "static/js/main.c56b38e7.chunk.js"
+    "static/js/main.67215c50.chunk.js"
   ]
 }
