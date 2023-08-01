@@ -8,7 +8,7 @@ const Footer = () => {
   const [update, setUpdate] = useState("01.01.2023");
   const [links, setLinks] = useState([
     { href: "https://vk.com/pdrobny", class: "fab fa-vk" },
-    { href: "https://github.com/paveldrobny", class: "fab fa-github" },
+    { href: "https://github.com/paveldrobny", class: "fab fa-github footer" },
   ]);
 
   useEffect(() => {

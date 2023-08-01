@@ -33,7 +33,7 @@ const data = [
     using: "SVG, Canvas",
     language: "JavaScript",
     repoName: "PlatformerJS",
-    update: "30.03.2022",
+    update: "01.08.2023",
     urlDemo: "https://paveldrobny.github.io/PlatformerJS/",
     urlCode: "https://github.com/paveldrobny/PlatformerJS",
     isShow: true,

@@ -44,7 +44,7 @@
   padding-bottom: 5px;
 }
 
-#carousel-image-content:hover+.carousel-btn {
+#carousel-image-content:hover + .carousel-btn {
   display: block;
 }
 
@@ -66,7 +66,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(82, 82, 82, .4);
+  border: 1px solid rgba(82, 82, 82, 0.4);
   box-shadow: 0px 4px 12px rgba(18, 25, 43, 0.12);
   background: var(--cards-bg);
 }
@@ -90,11 +90,11 @@
 
 /* ANIM ICON ON HOVER */
 
-.carousel-btn button:hover>.fa-chevron-left {
+.carousel-btn button:hover > .fa-chevron-left {
   left: -5px;
 }
 
-.carousel-btn button:hover>.fa-chevron-right {
+.carousel-btn button:hover > .fa-chevron-right {
   right: -5px;
 }
 
@@ -117,7 +117,7 @@
   font-size: 20px;
   font-weight: 600;
   color: var(--color-text);
-  border-bottom: var(--border)
+  border-bottom: var(--border);
 }
 
 #carousel-image-content {
@@ -125,7 +125,7 @@
   overflow: hidden;
   top: 0;
   height: 635px;
-  border-radius: 8px;
+  border-radius: 10px;
   white-space: nowrap;
   box-shadow: 0px 4px 12px rgba(18, 25, 43, 0.12);
 }
@@ -165,7 +165,7 @@
   right: -15%;
   bottom: 8px;
   opacity: 0;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .project-info.is-active {
@@ -181,7 +181,7 @@
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid rgba(151, 151, 151, 0.45);
-  background: rgb(15, 15, 15)
+  background: rgb(15, 15, 15);
 }
 
 .project-name i b {
@@ -253,7 +253,7 @@
     display: block;
   }
 
-  .carousel-dots{
+  .carousel-dots {
     width: 55px;
   }
 }

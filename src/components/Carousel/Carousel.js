@@ -29,22 +29,18 @@ const Carousel = () => {
   // const db = firebase.firestore();
   const time = 5000;
   const numberToShow = 3;
+  const obj = data;
 
   useEffect(() => {
-    const carouselsData = [];
-
-    // db.collection("Projects")
-    //   .orderBy("update", "desc")
-    //   .get()
-    //   .then((querySnapshot) => {
-    //     querySnapshot.forEach((doc) => {
-    //       carouselsData.push(doc.data());
-    //     });
-    //     setCarousels(carouselsData.slice(0, numberToShow));
-    //     setLoading(false);
-    //   });
-
-    setCarousels(data.slice(0, numberToShow));
+    setCarousels(
+      obj
+        .sort((a, b) => {
+          a = a.update.split(".").reverse().join("");
+          b = b.update.split(".").reverse().join("");
+          return a < b ? 1 : a > b ? -1 : 0;
+        })
+        .slice(0, numberToShow)
+    );
     setLoading(false);
   }, []);
 

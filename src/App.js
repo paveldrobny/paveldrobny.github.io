@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./App.css";
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";

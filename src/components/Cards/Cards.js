@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import LoadingCard from "../Loadings/Card";
 import "./Card.css";
-import data from "../../cardsData"
+import data from "../../cardsData";
 
 const Cards = () => {
   const [cards, setCards] = useState([]);
@@ -13,16 +13,8 @@ const Cards = () => {
   useEffect(() => {
     const cardsData = [];
 
-    // db.collection("Projects")
-    //   .orderBy("id", "desc")
-    //   .get()
-    //   .then((querySnapshot) => {
-    //     querySnapshot.forEach((doc) => {
-    //       cardsData.push(doc.data());
-    //       updateProjectData(doc.data().repoName, doc.id);
-    //     });
-         setCards(data);
-         setLoading(false);
+    setCards(data);
+    setLoading(false);
     //   });
   }, []);
 
@@ -42,13 +34,15 @@ const Cards = () => {
 
   return (
     <div className="projects">
-        {isLoading ? (
-          <LoadingCard />
-        ) : (
-          cards.map((card, index) => {
+      {isLoading ? (
+        <LoadingCard />
+      ) : (
+        cards
+          .sort((a, b) => b.id - a.id)
+          .map((card, index) => {
             return <Card card={card} key={index}></Card>;
           })
-        )}
+      )}
     </div>
   );
 };

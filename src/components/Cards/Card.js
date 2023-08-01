@@ -30,13 +30,15 @@ const Card = ({ card }) => {
             card={card.urlDemo}
             name="DEMO"
             FA_icon="play"
+            isFab={false}
             className={`card-btn btn-demo ${card.isDemo ? "is-active" : ""}`}
           />
 
           <Link
             card={card.urlCode}
             name="SOURCE CODE"
-            FA_icon="code"
+            FA_icon="github"
+            isFab={true}
             className="card-btn btn-code"
           />
         </div>

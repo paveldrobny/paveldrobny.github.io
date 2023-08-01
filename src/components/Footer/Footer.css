@@ -45,7 +45,7 @@ footer {
     color: var(--footer-bg);
 }
 
-.fa-github, .fa-vk {
+.fa-github.footer, .fa-vk {
   position: relative;
   top: 4px;
   left: 1px;
