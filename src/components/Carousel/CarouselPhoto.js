@@ -28,7 +28,7 @@ const CarouselPhoto = (props) => {
                 <i>
                   <b>{carousel.name}</b>
                 </i>
-                {carousel.using}
+                Update: {carousel.update}
               </div>
             </div>
           </div>
