@@ -1,35 +1,45 @@
-#footer-wrapper {
-  position: relative;
-  width: 100%;
-  /* padding: 20px 0 41px; */
-}
-
-footer {
-  position: relative;
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border-top: 1px solid rgba(146, 146, 146, 0.15);
-  background: var(--cards-bg)
+  border-top: 1px solid hsla(0, 0%, 57%, 0.15);
+  border-radius: 10px;
+  padding: 15px 0;
+  margin-top: 35px;
+  background: var(--card-bg);
 }
 
 #footer-update-text {
   position: relative;
-  font-weight: bold;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 15px;
   color: var(--footer-text);
-  padding: 30px 0 5px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-link {
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  margin: 20px 10px;
-  transition: 0.1s;
-  font-weight: 100;
-  color: var(--color-text);
   border: 0 solid var(--color-text);
-  border-radius: 4px;
-  letter-spacing: 3px;
+  border-radius: 10px;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 23px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  width: 50px;
+  margin: 5px 10px;
+  aspect-ratio: 1;
+  position: relative;
+  transition: 0.1s;
 }
 
 .footer-link:hover {
@@ -38,17 +48,14 @@ footer {
 }
 
 .footer-link a {
-    color: var(--color-text);
+  color: var(--color-text);
 }
 
 .footer-link:hover a {
-    color: var(--footer-bg);
+  color: var(--footer-bg);
 }
 
-.fa-github.footer, .fa-vk {
-  position: relative;
-  top: 4px;
-  left: 1px;
-  padding: 0;
+.fa-github.footer-icon,
+.fa-vk.footer-icon {
   font-size: 35px;
 }

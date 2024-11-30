@@ -1,59 +1,35 @@
-#header {
-  position: relative;
+.header {
+  z-index: 99990;
   user-select: none;
-  width: 100%;
+  position: sticky;
+  top: -1px;
+  max-width: var(--max-width);
+  margin: 0 auto;
   height: 55px;
-  z-index: 999;
-  box-shadow: 0 2px 2px rgb(157 172 207 / 8%);
-  background-color: var(--header);
-}
-
-#header.is-active {
-  box-shadow: 0 2px 2px rgb(157 172 207 / 8%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--header)
 }
 
 .header-content {
-  margin-left: 10px;
-  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
   height: 100%;
 }
 
-.header-title,
-.header-nav-btn {
-  display: inline;
-  line-height: 55px;
-}
-
 .header-title {
+  position: relative;
+  top: -3px;
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 1px;
-  line-height: 49px;
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
+  color: var(--color-text);
 }
 
 .header-nav-btn {
-  overflow: hidden;
-  right: 0;
-  float: right;
-}
-
-#theme-btn {
   cursor: pointer;
-  padding: 0 5px;
-}
-
-.fa-moon,
-.fa-sun {
-  position: relative;
-  transition: 0.15s;
-  line-height: 50px;
-  font-size: 18px;
-}
-
-.header-content,
-.fa-moon,
-.fa-sun,
-.header-nav-btn ul li a {
   color: var(--color-text);
 }
