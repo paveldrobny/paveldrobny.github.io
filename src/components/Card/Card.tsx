@@ -9,7 +9,7 @@ function Card(props: ICard) {
       <ul className="card-list">
         <li className="card-text">Using: {props.using}</li>
         <li className="card-text">Language: {props.language}</li>
-        <li className="card-text">Update: {props.updateData}</li>
+        <li className="card-text">Update: {props.update}</li>
       </ul>
       <div className="card-btn-content">
         {props.urlDemo.length > 0 ? (

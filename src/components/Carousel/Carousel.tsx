@@ -5,7 +5,7 @@ import ICard from "../../interfaces";
 
 function Carousel() {
   const [current, setCurrent] = useState(0);
-  const [navButtons, setNavButtons] = useState([
+  const navButtons = [
     {
       id: "carousel-btn-left",
       icon: "fa-chevron-left",
@@ -16,25 +16,23 @@ function Carousel() {
       icon: "fa-chevron-right",
       isForward: false,
     },
-  ]);
+  ];
 
   const [carousels, setCarousels] = useState(cards);
   //   const [isCarouselMove, setCarouselMove] = useState(true);
   //   const [progress, setProgress] = useState(0);
-  const [isLoading, setLoading] = useState(true);
+  // const [isLoading, setLoading] = useState(true);
   const numberToShow = 3;
 
   useEffect(() => {
     setCarousels(
       cards
         .sort((a: ICard, b: ICard) => {
-          a.updateData = a.updateData.split(".").reverse().join("");
-          a.updateData = b.updateData.split(".").reverse().join("");
-          return a < b ? 1 : a > b ? -1 : 0;
+          return b.publishData - a.publishData;
         })
         .slice(0, numberToShow)
     );
-    setLoading(false);
+    // setLoading(false);
   }, []);
 
   const changeSlide = (isForward: boolean) => {
@@ -61,7 +59,7 @@ function Carousel() {
               >
                 <div className="carousel-info">
                   <div className="carousel-info-title">{c.title}</div>
-                  <div className="carousel-info-date">{c.updateData}</div>
+                  <div className="carousel-info-date">{c.update}</div>
                 </div>
               </div>
             );
@@ -84,6 +82,7 @@ function Carousel() {
           {carousels.map((c, index: number) => {
             return (
               <div
+                key={c.id}
                 className={`carousel-dot ${
                   current === index ? "is-active" : ""
                 } `}

@@ -1,5 +1,4 @@
 import "./App.css";
-import { useState } from "react";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import cards from "./cards";
@@ -7,8 +6,6 @@ import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <Header />
@@ -32,7 +29,7 @@ function App() {
               title={c.title}
               using={c.using}
               language={c.language}
-              updateData={c.updateData}
+              update={c.update}
               urlDemo={c.urlDemo}
               urlCode={c.urlCode}
               publishData={c.publishData}

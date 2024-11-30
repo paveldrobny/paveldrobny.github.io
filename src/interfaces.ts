@@ -4,10 +4,10 @@ interface ICard {
   title: string;
   using: string;
   language: string;
-  updateData: string;
+  update: string;
   urlDemo: string;
   urlCode: string;
-  publishData?: number;
+  publishData: number;
 }
 
 export default ICard;
