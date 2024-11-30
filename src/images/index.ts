@@ -1,2 +1,2 @@
-import Images from "./Images";
+import Images from "./images";
 export default Images;
