@@ -1,0 +1,11 @@
+.title-main {
+  width: calc(100% - 42px);
+  margin: 25px 21px 10px;
+  padding-bottom: 8px;
+  color: var(--color-text);
+  border-bottom: var(--border);
+}
+
+.title-main i {
+  margin-right: 5px;
+}

@@ -17,6 +17,10 @@ body {
   --footer-bg: rgb(255, 255, 255);
   --footer-text: rgb(61, 61, 61);
   --footer-link: black;
+  --settings-item-bg: rgb(237, 237, 237);
+  --settings-item-hover: rgb(219, 219, 219);
+  --settings-switch-bg: rgb(172, 172, 172);
+  --settings-switch-dot: white;
 }
 
 [class="dark-theme"] {
@@ -30,6 +34,10 @@ body {
   --footer-bg: rgb(15, 15, 15);
   --footer-text: rgb(161, 161, 161);
   --footer-link: white;
+  --settings-item-bg: rgb(37, 37, 37);
+  --settings-item-hover: rgb(57, 57, 57);
+  --settings-switch-bg: rgb(107, 107, 107);
+  --settings-switch-dot: rgb(23, 23, 23);
 }
 
 ul,
@@ -55,27 +63,13 @@ li {
 }
 
 .content {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   max-width: var(--max-width);
 }
 
-.title-main {
-  width: calc(100% - 42px);
-  margin: 25px 21px 10px;
-  padding-bottom: 8px;
-  color: var(--color-text);
-  border-bottom: var(--border);
-}
-
-.title-main i {
-  margin-right: 5px;
-}
-
 .cards-wrapper {
-  display: flex;
+  display: grid;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
   padding: 0 5px;
 }

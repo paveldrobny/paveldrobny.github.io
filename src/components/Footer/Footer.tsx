@@ -1,21 +1,22 @@
+import { useTranslation } from "react-i18next";
 import "./Footer.css";
+import { socialData } from "../../data/lists";
+import FooterLink from "./FooterLink";
+import { siteUpdate } from "../../data/config";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
-      <div id="footer-update-text">Update: 30.11.2024</div>
-      <div className="footer-social">
-        <li className="footer-link">
-          <a href="https://vk.com/pdrobny">
-            <i className="fa-brands fa-vk footer-icon"></i>
-          </a>
-        </li>
-        <li className="footer-link">
-          <a href="https://github.com/paveldrobny">
-            <i className="fa-brands fa-github footer-icon"></i>
-          </a>
-        </li>
+      <div id="footer-updated-text">
+        {t("updated")}: {siteUpdate}
       </div>
+      <ul className="footer-social">
+        {socialData.map((s) => {
+          return <FooterLink key={s.url} {...s} />;
+        })}
+      </ul>
     </footer>
   );
 }

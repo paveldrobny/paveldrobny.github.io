@@ -99,6 +99,10 @@
   letter-spacing: 1px;
 }
 
+.card-btn.is-hide {
+  display: none;
+}
+
 .card-btn-text {
   display: inline-block;
   padding-right: 5px;
@@ -222,7 +226,6 @@
     padding-left: 0px;
   }
 }
-
 
 @media screen and (max-width: 320px) {
   .card-img {

@@ -11,7 +11,7 @@
   background: var(--card-bg);
 }
 
-#footer-update-text {
+#footer-updated-text {
   position: relative;
   width: 100%;
   font-weight: 700;
@@ -57,5 +57,11 @@
 
 .fa-github.footer-icon,
 .fa-vk.footer-icon {
-  font-size: 35px;
+  position: relative;
+  font-size: 36px;
+}
+
+.fa-vk.footer-icon {
+  top: 1px;
+  left: 1px;
 }

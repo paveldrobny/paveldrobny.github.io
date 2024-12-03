@@ -1,28 +1,17 @@
 import { useState, useEffect } from "react";
 import "./Carousel.css";
-import cards from "../../cards";
-import ICard from "../../interfaces";
+import cards from "../../data/cards";
+import { ICard } from "../../interfaces";
+import CarouselDot from "./CarouselDot";
+import CarouselArrow from "./CarouselArrow";
+import CarouselImage from "./CarouselImage";
+import { slideToShow } from "../../data/config";
+import { sliderBtnData } from "../../data/lists";
 
 function Carousel() {
   const [current, setCurrent] = useState(0);
-  const navButtons = [
-    {
-      id: "carousel-btn-left",
-      icon: "fa-chevron-left",
-      isForward: true,
-    },
-    {
-      id: "carousel-btn-right",
-      icon: "fa-chevron-right",
-      isForward: false,
-    },
-  ];
 
   const [carousels, setCarousels] = useState(cards);
-  //   const [isCarouselMove, setCarouselMove] = useState(true);
-  //   const [progress, setProgress] = useState(0);
-  // const [isLoading, setLoading] = useState(true);
-  const numberToShow = 3;
 
   useEffect(() => {
     setCarousels(
@@ -30,9 +19,8 @@ function Carousel() {
         .sort((a: ICard, b: ICard) => {
           return b.publishData - a.publishData;
         })
-        .slice(0, numberToShow)
+        .slice(0, slideToShow)
     );
-    // setLoading(false);
   }, []);
 
   const changeSlide = (isForward: boolean) => {
@@ -47,47 +35,39 @@ function Carousel() {
     <div className="carousel">
       <div className="carousel-content">
         <div className="carousel-image-wrapper">
-          {carousels.map((c, index: number) => {
+          {carousels.map((c: ICard, index: number) => {
             return (
-              <div
-                className={`carousel-image ${
-                  current === index ? "is-active" : ""
-                }`}
-                style={{
-                  backgroundImage: `url(${c.image})`,
-                }}
-              >
-                <div className="carousel-info">
-                  <div className="carousel-info-title">{c.title}</div>
-                  <div className="carousel-info-date">{c.update}</div>
-                </div>
-              </div>
+              <CarouselImage
+                key={c.title}
+                current={current}
+                index={index}
+                {...c}
+              />
             );
           })}
 
           <div className="carousel-btn-content">
-            {navButtons.map((n) => {
+            {sliderBtnData.map((n) => {
               return (
-                <button
-                  className="carousel-btn"
-                  onClick={() => changeSlide(!n.isForward)}
-                >
-                  <i className={`fas ${n.icon}`}></i>
-                </button>
+                <CarouselArrow
+                  key={n.icon}
+                  icon={n.icon}
+                  changeSlide={() => changeSlide(!n.isForward)}
+                />
               );
             })}
           </div>
         </div>
+
         <div className="carousel-dot-content">
           {carousels.map((c, index: number) => {
             return (
-              <div
+              <CarouselDot
                 key={c.id}
-                className={`carousel-dot ${
-                  current === index ? "is-active" : ""
-                } `}
-                onClick={() => setCurrent(index)}
-              ></div>
+                current={current}
+                index={index}
+                setCurrent={() => setCurrent(index)}
+              />
             );
           })}
         </div>

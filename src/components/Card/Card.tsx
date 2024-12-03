@@ -1,27 +1,42 @@
 import "./Card.css";
-import ICard from "../../interfaces";
+import { ICard } from "../../interfaces";
+import CardInfo from "./CardInfo";
+import CardAction from "./CardAction";
+import { useTranslation } from "react-i18next";
 
 function Card(props: ICard) {
+  const { t } = useTranslation();
+
+  const btnActions = [
+    {
+      url: props.urlDemo,
+      clsName: "btn-demo",
+      textCode: "demo",
+      icon: "fas fa-play",
+      isHide: props.urlDemo.length === 0,
+    },
+    {
+      url: props.urlCode,
+      clsName: "btn-code",
+      textCode: "sourceCode",
+      icon: "fab fa-github",
+      isHide: false,
+    },
+  ];
+
+  const { image, title } = props;
+
   return (
     <div className="card">
-      <img className="card-img" src={props.image} alt={props.title} />
-      <h1 className="card-title">{props.title}</h1>
-      <ul className="card-list">
-        <li className="card-text">Using: {props.using}</li>
-        <li className="card-text">Language: {props.language}</li>
-        <li className="card-text">Update: {props.update}</li>
-      </ul>
+      <img className="card-img" src={image} alt={title} />
+      <h1 className="card-title">{title}</h1>
+      <CardInfo {...props} />
       <div className="card-btn-content">
-        {props.urlDemo.length > 0 ? (
-          <a href={props.urlDemo} target="_blank" className="card-btn btn-demo">
-            <div className="card-btn-text">DEMO</div>
-            <i className="fas fa-play"></i>
-          </a>
-        ) : null}
-        <a href={props.urlCode} target="_blank" className="card-btn btn-code">
-          <div className="card-btn-text">SOURCE CODE</div>
-          <i className="fab fa-github"></i>
-        </a>
+        {btnActions.map((b) => {
+          return !b.isHide ? (
+            <CardAction key={b.textCode} text={t(b.textCode)} {...b} />
+          ) : null;
+        })}
       </div>
     </div>
   );
