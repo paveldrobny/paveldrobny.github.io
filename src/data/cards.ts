@@ -39,7 +39,7 @@ const cards: ICard[] = [
     id: 2,
     image: img.hudInformation,
     title: "HUD information",
-    using: "Unreal Engine 4.26",
+    using: "UE 4.26",
     language: "C++, Blueprints",
     updated: "04.09.2022",
     urlDemo: "",

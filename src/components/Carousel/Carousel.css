@@ -135,6 +135,12 @@
   .carousel-image-wrapper {
     height: 215px;
   }
+  .carousel-info-title {
+    font-size: 14px;
+  }
+  .carousel-info-date {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -143,5 +149,11 @@
   }
   .carousel-btn {
     width: 35px;
+  }
+  .carousel-info-title {
+    font-size: 11px;
+  }
+  .carousel-info-date {
+    font-size: 9px;
   }
 }

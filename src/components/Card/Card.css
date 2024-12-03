@@ -1,11 +1,11 @@
 .card {
   overflow: hidden;
-  width: 400px;
+
   border-radius: 10px;
-  margin: 0px 8px 16px;
+  /* margin: 0px 8px 16px; */
   text-align: center;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 1s;
   box-sizing: border-box;
   box-shadow: rgba(18, 25, 43, 0.12) 0px 4px 12px;
   background: var(--card-bg);
@@ -140,7 +140,18 @@
   padding-left: 5px;
 }
 
-@media screen and (max-width: 1247px) {
+@media screen and (max-width: 770px) {
+  .card-btn-text {
+    display: none;
+  }
+  .fa-play,
+  .fa-github,
+  .fa-code {
+    padding-left: 0px;
+  }
+}
+
+/* @media screen and (max-width: 1247px) {
   .card {
     width: calc(50% - 16px);
   }
@@ -207,28 +218,5 @@
   .fa-github,
   .fa-code {
     padding-left: 5px;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .card {
-    width: calc(100% - 16px);
-  }
-  .card-img {
-    height: 180px;
-  }
-  .card-btn-text {
-    display: none;
-  }
-  .fa-play,
-  .fa-github,
-  .fa-code {
-    padding-left: 0px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card-img {
-    height: 150px;
   }
 }

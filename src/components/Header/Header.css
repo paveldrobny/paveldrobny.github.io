@@ -50,3 +50,10 @@
   font-size: 19px;
   color: var(--color-text);
 }
+
+@media screen and (max-width: 390px) {
+  .header-title {
+    top: -1px;
+    font-size: 19px;
+  }
+}
