@@ -3,6 +3,17 @@ import { ICard } from "../interfaces";
 
 const cards: ICard[] = [
   {
+    id: 6,
+    image: img.ue4QuestSystem,
+    title: "UE4 Quest System using BP Nodes",
+    using: "UE 4.27",
+    language: "Blueprints",
+    updated: "03.07.2025",
+    urlDemo: "",
+    urlCode: "https://github.com/paveldrobny/UE4_QuestSystem_BP",
+    publishData: 1751574800,
+  },
+  {
     id: 5,
     image: img.spaceShooterJS,
     title: "Space shooter on JS v1.1",
